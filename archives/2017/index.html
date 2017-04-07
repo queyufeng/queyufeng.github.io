@@ -28,6 +28,16 @@
 
 
 
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
 
 
   
@@ -89,12 +99,12 @@
 
 <meta name="description" content="今天你足够努力了吗!?">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="小鸟依家">
 <meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="今天你足够努力了吗!?">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="小鸟依家">
 <meta name="twitter:description" content="今天你足够努力了吗!?">
 
 
@@ -129,7 +139,7 @@
 
 
 
-  <title> 归档 | Hexo </title>
+  <title> 归档 | 小鸟依家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,7 +175,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">小鸟依家</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -210,12 +220,42 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-readingnotes">
+          <a href="https://readingnotes.shenshanlaoyuan.com" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            标签
+            读书笔记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resume">
+          <a href="http://resume.shenshanlaoyuan.com" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            简历
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="http://about.shenshanlaoyuan.com" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            留言
           </a>
         </li>
       
