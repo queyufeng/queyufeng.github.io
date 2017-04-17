@@ -2007,7 +2007,7 @@
     <link href="http://yoursite.com/2017/04/10/0901-javascript/"/>
     <id>http://yoursite.com/2017/04/10/0901-javascript/</id>
     <published>2017-04-10T14:51:38.000Z</published>
-    <updated>2017-04-10T15:14:44.535Z</updated>
+    <updated>2017-04-17T09:42:37.834Z</updated>
     
     <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2526613&auto=1&height=66"></iframe></p>
 <h1 id="javascript-数组"><a href="#javascript-数组" class="headerlink" title="javascript 数组"></a>javascript 数组</h1><h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a>定义数组</h2><h3 id="一维数组创建语法："><a href="#一维数组创建语法：" class="headerlink" title="一维数组创建语法："></a>一维数组创建语法：</h3><blockquote>
@@ -2125,7 +2125,8 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
     after: 1,2,3,4,5,6,7,8,9,10
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> i = arr.length, j;</div><div class="line"><span class="keyword">var</span> tempExchangVal;</div><div class="line"><span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123;</div><div class="line">	<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i - <span class="number">1</span>; j++) &#123;</div><div class="line"><span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</div><div class="line">tempExchangVal = arr[j];      </div><div class="line">arr[j] = arr[j + <span class="number">1</span>];</div><div class="line">arr[j + <span class="number">1</span>] = tempExchangVal;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">i--;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</code></pre>]]></content>
+</code></pre><h1 id="城市二级联动"><a href="#城市二级联动" class="headerlink" title="城市二级联动:"></a>城市二级联动:</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></div><div class="line">          <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">id</span>=<span class="string">"gametype"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"aa"</span>&gt;</span>游戏分类<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">id</span>=<span class="string">"gamelist"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>游戏名称<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line">     <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">         <span class="keyword">var</span> game = <span class="keyword">new</span> <span class="built_in">Array</span>( );</div><div class="line"></div><div class="line">         game[<span class="string">'纸牌游戏'</span>]=[<span class="string">'斗地主'</span>, <span class="string">'拖拉机'</span>, <span class="string">'桥牌'</span>, <span class="string">'拱猪'</span>, <span class="string">'打百分'</span>];</div><div class="line">         game[<span class="string">'棋类游戏'</span>]=[<span class="string">'军棋'</span>, <span class="string">'跳棋'</span>, <span class="string">'五子棋'</span>, <span class="string">'围棋'</span>, <span class="string">'中国象棋'</span>, <span class="string">'国际象棋'</span>, <span class="string">'飞行棋'</span>, <span class="string">'黑白棋'</span>];</div><div class="line">         game[<span class="string">'其他游戏'</span>] = [<span class="string">'连连看'</span>, <span class="string">'俄罗斯方块'</span>, <span class="string">'麻将'</span>, <span class="string">'台球'</span>, <span class="string">'挑错'</span>];</div><div class="line"></div><div class="line"></div><div class="line">         <span class="comment">//</span></div><div class="line">         <span class="keyword">var</span> gametype=<span class="built_in">document</span>.getElementById(<span class="string">"gametype"</span>)</div><div class="line">         <span class="keyword">for</span>(<span class="keyword">var</span> x <span class="keyword">in</span> game)&#123;</div><div class="line"></div><div class="line">             gametype.add(<span class="keyword">new</span> Option(x,x))</div><div class="line">         &#125;</div><div class="line">        gametype.onchange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line"></div><div class="line">             <span class="keyword">var</span>  gamelist=<span class="built_in">document</span>.getElementById(<span class="string">"gamelist"</span>)</div><div class="line">             gamelist.options.length=<span class="number">0</span>;</div><div class="line">             <span class="keyword">var</span>  gametypevalue=gametype.value;</div><div class="line"></div><div class="line">             <span class="keyword">for</span>(<span class="keyword">var</span> j <span class="keyword">in</span> game)&#123;</div><div class="line">              <span class="keyword">if</span>(j==gametypevalue)&#123;</div><div class="line"></div><div class="line">                  <span class="keyword">for</span>(<span class="keyword">var</span> f=<span class="number">0</span>;f&lt;game[j].length;f++)&#123;</div><div class="line">                      <span class="built_in">console</span>.log(game[j]);</div><div class="line">                      <span class="built_in">console</span>.log(game[j][f]);</div><div class="line">                      gamelist.add(<span class="keyword">new</span> Option(game[j][f],game[j][f]))</div><div class="line">                  &#125;</div><div class="line"></div><div class="line"></div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line"></div><div class="line">         &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -2151,7 +2152,7 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
     <link href="http://yoursite.com/2017/04/10/0801-javascript/"/>
     <id>http://yoursite.com/2017/04/10/0801-javascript/</id>
     <published>2017-04-10T14:48:08.000Z</published>
-    <updated>2017-04-10T15:14:37.388Z</updated>
+    <updated>2017-04-17T06:06:12.961Z</updated>
     
     <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=31445554&auto=1&height=66"></iframe></p>
 <h1 id="JS赋值-运算比较-流程控制"><a href="#JS赋值-运算比较-流程控制" class="headerlink" title="JS赋值 运算比较 流程控制"></a>JS赋值 运算比较 流程控制</h1><h2 id="变量的声明与赋值"><a href="#变量的声明与赋值" class="headerlink" title="变量的声明与赋值"></a>变量的声明与赋值</h2><ul>
@@ -2174,7 +2175,7 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 <h2 id="JS运算"><a href="#JS运算" class="headerlink" title="JS运算"></a>JS运算</h2><h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><ul>
 <li>算数运算符(+,-,*,/,%,++,–)</li>
 <li>赋值运算符(=,+=,-=,*=,/=,%=)</li>
-<li>字符串连接符(-)</li>
+<li>字符串连接符(+)</li>
 <li>优先级:<blockquote>
 <p>优先级：（）&gt;算术运算符（先乘除后加减）&gt;赋值运算符</p>
 <h2 id="JS比较"><a href="#JS比较" class="headerlink" title="JS比较"></a>JS比较</h2><h3 id="比较符号"><a href="#比较符号" class="headerlink" title="比较符号"></a>比较符号</h3></blockquote>
@@ -2533,11 +2534,11 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -2557,11 +2558,11 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -2742,11 +2743,11 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -2914,11 +2915,11 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -3159,11 +3160,11 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
