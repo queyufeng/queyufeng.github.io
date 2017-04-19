@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-19T08:11:35.646Z</updated>
+  <updated>2017-04-19T08:13:33.737Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,44 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>HTML 5+CSS3从入门到精通</title>
-    <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
-    <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
-    <published>2017-04-19T07:31:31.000Z</published>
-    <updated>2017-04-19T08:11:35.646Z</updated>
-    
-    <content type="html"><![CDATA[
-
-	<div class="row">
-    <embed src="/PDF/HTML" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>HTML5+CSS3从入门到精通是通过基础知识+中小实例+综合案例的方式，讲述了用HTML5+ CSS3设计构建网站的必备知识，相对于专业指南、高级程序设计、开发指南同类图书，本书是一本适合快速入手的自学教程。内容有：创建HTML5文档，实战HTML5表单，实战HTML5绘画，HTML5音频与视频，Web存储，离线应用，Workers多线程处理，Geolocation地理位置等技术。CSS3部分主要介绍了CSS3概述，CSS选择器，文本、字体与颜色，背景和边框，2D变形，设计动画，网页布局、用户界面以及CSS3的其他新特性。<br>《HTML5+CSS3从入门到精通》内容涵盖了HTML5+CSS3的所有重要特性，通过大量实际案例对HTML5+CSS3的重要特性进行了详细讲解，内容全面丰富，易于理解，能够帮助读者提升实际应用技能。</p>
-<p>《HTML5+CSS3从入门到精通》内容翔实、结构清晰、循序渐进，基础知识与案例实战紧密结合，既可作为HTML5+CSS3初学者的入门教材，也适合作为中高级用户对新技术作进一步学习的参考用书。本书显著特色有：<br>　　1．同步视频讲解，让学习更为直观高效。227节大型高清同步视频讲解，先看视频再学习效率更高。<br>　　2．海量精彩实例，用实例学更轻松快捷。225个精彩实例，模仿练习是最快捷的学习方式。<br>　　3．精选实战案例，为高薪就业牵线搭桥。31个实战案例展示可为以后就业积累经验。<br>　　4．完整学习套餐，为读者提供贴心服务。参考手册11部、网页模版83类、素材源程序，让学习更加方便。<br>　　5．讲解通俗翔实，看得懂学得会才是硬道理。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/PDF/HTML&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;
-
-
-
-&lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
-    
-    </summary>
-    
-      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>HTML5与CSS3权威指南(完整版)</title>
@@ -83,6 +45,44 @@
 
 
 &lt;p&gt;HTML 5与CS
+    
+    </summary>
+    
+      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML 5+CSS3从入门到精通</title>
+    <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
+    <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
+    <published>2017-04-19T07:31:31.000Z</published>
+    <updated>2017-04-19T08:11:35.646Z</updated>
+    
+    <content type="html"><![CDATA[
+
+	<div class="row">
+    <embed src="/PDF/HTML" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>HTML5+CSS3从入门到精通是通过基础知识+中小实例+综合案例的方式，讲述了用HTML5+ CSS3设计构建网站的必备知识，相对于专业指南、高级程序设计、开发指南同类图书，本书是一本适合快速入手的自学教程。内容有：创建HTML5文档，实战HTML5表单，实战HTML5绘画，HTML5音频与视频，Web存储，离线应用，Workers多线程处理，Geolocation地理位置等技术。CSS3部分主要介绍了CSS3概述，CSS选择器，文本、字体与颜色，背景和边框，2D变形，设计动画，网页布局、用户界面以及CSS3的其他新特性。<br>《HTML5+CSS3从入门到精通》内容涵盖了HTML5+CSS3的所有重要特性，通过大量实际案例对HTML5+CSS3的重要特性进行了详细讲解，内容全面丰富，易于理解，能够帮助读者提升实际应用技能。</p>
+<p>《HTML5+CSS3从入门到精通》内容翔实、结构清晰、循序渐进，基础知识与案例实战紧密结合，既可作为HTML5+CSS3初学者的入门教材，也适合作为中高级用户对新技术作进一步学习的参考用书。本书显著特色有：<br>　　1．同步视频讲解，让学习更为直观高效。227节大型高清同步视频讲解，先看视频再学习效率更高。<br>　　2．海量精彩实例，用实例学更轻松快捷。225个精彩实例，模仿练习是最快捷的学习方式。<br>　　3．精选实战案例，为高薪就业牵线搭桥。31个实战案例展示可为以后就业积累经验。<br>　　4．完整学习套餐，为读者提供贴心服务。参考手册11部、网页模版83类、素材源程序，让学习更加方便。<br>　　5．讲解通俗翔实，看得懂学得会才是硬道理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/PDF/HTML&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
     
     </summary>
     
