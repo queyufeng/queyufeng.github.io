@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[HTML 5+CSS3从入门到精通]]></title>
+      <url>%2F2017%2F04%2F19%2Fhtml-css-pdf%2F</url>
+      <content type="text"><![CDATA[HTML5+CSS3从入门到精通是通过基础知识+中小实例+综合案例的方式，讲述了用HTML5+ CSS3设计构建网站的必备知识，相对于专业指南、高级程序设计、开发指南同类图书，本书是一本适合快速入手的自学教程。内容有：创建HTML5文档，实战HTML5表单，实战HTML5绘画，HTML5音频与视频，Web存储，离线应用，Workers多线程处理，Geolocation地理位置等技术。CSS3部分主要介绍了CSS3概述，CSS选择器，文本、字体与颜色，背景和边框，2D变形，设计动画，网页布局、用户界面以及CSS3的其他新特性。《HTML5+CSS3从入门到精通》内容涵盖了HTML5+CSS3的所有重要特性，通过大量实际案例对HTML5+CSS3的重要特性进行了详细讲解，内容全面丰富，易于理解，能够帮助读者提升实际应用技能。 《HTML5+CSS3从入门到精通》内容翔实、结构清晰、循序渐进，基础知识与案例实战紧密结合，既可作为HTML5+CSS3初学者的入门教材，也适合作为中高级用户对新技术作进一步学习的参考用书。本书显著特色有： 1．同步视频讲解，让学习更为直观高效。227节大型高清同步视频讲解，先看视频再学习效率更高。 2．海量精彩实例，用实例学更轻松快捷。225个精彩实例，模仿练习是最快捷的学习方式。 3．精选实战案例，为高薪就业牵线搭桥。31个实战案例展示可为以后就业积累经验。 4．完整学习套餐，为读者提供贴心服务。参考手册11部、网页模版83类、素材源程序，让学习更加方便。 5．讲解通俗翔实，看得懂学得会才是硬道理。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[图解css3核心技术与案例实战]]></title>
+      <url>%2F2017%2F04%2F19%2FCSS3tujie%2F</url>
+      <content type="text"><![CDATA[图解CSS3：核心技术与案例实战是国内著名的Web前端专家历时2载的心血之作，根据最新的CSS3撰写，融入了作者在CSS领域近10年的使用经验，旨在将本书打造成为CSS3领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[HTML5与CSS3权威指南(完整版)]]></title>
+      <url>%2F2017%2F04%2F19%2Fhtml-css-quanweipdf%2F</url>
+      <content type="text"><![CDATA[HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。 第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[冒号课堂（完整版·影印版）]]></title>
+      <url>%2F2017%2F04%2F19%2Fmaopaoclass%2F</url>
+      <content type="text"><![CDATA[% pdf /PDF/冒号课堂（完整版·影印版）.pdf %}本书以课堂对话的形式，借六位师生之口讲述编程要义，对编程范式作了入门性的介绍，并对一些流行的编程语言进行了简评；侧重阐发软件设计思想，其中在范式上以OOP 为主，在语言上以C++、Java 和C#为主。全书寓庄于谐，深入浅出，既可开阔眼界，又能引发思考，值得编程爱好者品读。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JavaScript权威指南(第六版)中文扫描版]]></title>
+      <url>%2F2017%2F04%2F19%2Fjavascriptquanweizhinan%2F</url>
+      <content type="text"><![CDATA[《JavaScript权威指南（第6版）》主要讲述的内容涵盖JavaScript语言本身，以及Web浏览器所实现的JavaScript API。本书第6版涵盖了HTML5和ECMAScript 5，很多章节完全重写，增加了当今Web开发的最佳实践的内容，新增的章节包括jQuery、服务器端JavaScript、图形编程以及 JavaScript式的面向对象。本书不仅适合初学者系统学习，也适合有经验的 JavaScript 开发者随手翻阅。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JavaScript高级程序设计(第3版)]]></title>
+      <url>%2F2017%2F04%2F19%2FJavaScriptgaojichengxusheji%2F</url>
+      <content type="text"><![CDATA[《JavaScript高级程序设计(第3版)》是JavaScript超级畅销书的最新版。ECMAScript5和HTML5在标准之争中双双胜出，使大量专有实现和客户端扩展正式进入规范，同时也为JavaScript增添了很多适应未来发展的新特性。《JavaScript高级程序设计》这一版除增加5章全新内容外，其他章节也有较大幅度的增补和修订，新内容篇幅约占三分之一。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JavaScript字符串操作、 JSON、 this]]></title>
       <url>%2F2017%2F04%2F14%2F1101-json%2F</url>
       <content type="text"><![CDATA[JS字符串操作 “字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。 声明字符串的两种方法: var str1 = &quot;string1&quot; ; var str2 = new String(&quot;string2&quot;); 两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对象。如果引用被修改，str2也会被修改 字符串操作方法 charAt() 返回指定位置的字符 charCodeAt() 返回指定位置的字符的Unicode编码 search() 用于检索字符串中指定的子字符串 replace() 查找匹配指定的字符串，然后用新字符串代替匹配的字符串 concat() 将两个戒多个字符的文本组合起来，返回一个新的字符串 使用加号链接字符串。 newStr = “string1”+”string2” indexOf() 返回字符串中一个子串第一处出现的索引。如果没有匹配项，返回 -1 lastIndexOf() 返回字符串中一个子串最后一处出现的索引，如果没有匹配项，返回 -1 slice() 提取字符串的一部分，并返回一个新字符串。两个参数，第一个为起始位置，第二个为终止位置（留头不留尾），如果没有end，就取到末尾 substring() 返回字符串的一个子串。传入参数是起始位置和结束位置。（留头不留尾），如果没有end，就取到末尾 split() 通过将字符串划分成子串，将一个字符串做成一个字符串数组。 Length 返回字符串的长度（其包含的字符的个数） toLowerCase() 将整个字符串转成小写字母 toUpperCase() 将整个字符串转成大写字母 转义字符 \我们平时想输出一个双引号（“”）我们会这样写：document.write(“””);但是这样写是错诨的,所以我们需要用到转义字符：document.write(“ \””); JSON JSON，全称是JavaScript Object Notation。它是基于JavaScript编程诧言ECMA-262 3rd EditionDecember 1999标准的一种轻量级的数据交换格式，主要用于跟服务器进行交换数据。跟XML相类似，它独立诧言，在跨平台数据传输上有很大的优势。 JSON的书写格式： 格式一：{ “name”:“ xiaoming”, “age”:“22”, “email”:&quot;jone@163.com&quot; }; 格式二: 12345678&#123;"name":"xiaoming", "age":"22", "friends":[ &#123;"name":&#123;"firstName":"liu","lastName":"wei"&#125;,"age":"23"&#125;, &#123;"name":&#123;"firstName":"li","lastName":"mei"&#125;,"age":"27"&#125; ] &#125; 取值 用“点”来取得相应的值，如JSON.name JSON和字符串之间转换 JSON.stringify(json) JSON.parse(str) JSON拷贝 深拷贝,浅拷贝 This 关键字 this概念 : this是Javascript诧言的一个关键字它代表函数运行时，自劢生成的一个内部对象，只能在函数内部使用 三种情况下的this指向: 纯粹的函数调用: this指向调用函数的对象 作为对象方法的调用: this指向window 作为构造函数调用: this指向构造函数的实例 修改this指向: 使用call()方法1. 语法：call(thisObj，Object) 2. 定义：调用一个对象的一个方法，以另一个对象替换当前对象 使用apply()方法1. 语法：apply(thisObj，[argArray]) 2. 定义：应用某一对象的一个方法，用另一个对象替换当前对象 使用new关键字]]></content>
