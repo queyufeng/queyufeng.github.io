@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-19T08:13:33.737Z</updated>
+  <updated>2017-04-21T01:21:52.585Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,183 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Math对象,Date对象,正则表达式</title>
+    <link href="http://yoursite.com/2017/04/21/MathDate/"/>
+    <id>http://yoursite.com/2017/04/21/MathDate/</id>
+    <published>2017-04-21T01:19:19.000Z</published>
+    <updated>2017-04-21T01:21:52.585Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Math-对象"><a href="#Math-对象" class="headerlink" title="Math 对象"></a>Math 对象</h1><ol>
+<li><p>作用：</p>
+<blockquote>
+<p> Javascript中，Math 对象是用于执行数学任务的对象(取整、取余。)</p>
+</blockquote>
+</li>
+<li><p>访问语法：MAth.属性名</p>
+<blockquote>
+<p>注释：Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。您无需创建它，通过把 Math 作为对象使用就可以调用其所有属性和方法。</p>
+</blockquote>
+</li>
+<li><p>属性和方法</p>
+<ul>
+<li>abs(x)返回数的绝对值</li>
+<li>ceil(x)对数进行上取整</li>
+<li>floor(x)对数进行下取整</li>
+<li>max(x,y)返回 x 和 y 中的最高值</li>
+<li>min(x,y)返回 x 和 y 中的最低值</li>
+<li>round(x)把数四舍五入为最接近的整数</li>
+<li>pow(x,y)返回 x 的 y 次幂</li>
+<li>random()返回 0 ~ 1 之间的随机数</li>
+<li>sqrt(x)返回数的平方根</li>
+</ul>
+</li>
+</ol>
+<h1 id="Date-对象"><a href="#Date-对象" class="headerlink" title="Date 对象"></a>Date 对象</h1><ol>
+<li><p>作用 :</p>
+<blockquote>
+<p>Javascript中， Date 对象用于处理日期和时间</p>
+</blockquote>
+</li>
+<li><p>创建 Date 对象的语法：</p>
+<blockquote>
+<p><code>var myDate=new Date()</code></p>
+</blockquote>
+</li>
+<li><p>属性</p>
+<ul>
+<li>constructor迒回对创建此对象的 Date 函数的引用</li>
+<li>prototype使您有能力向对象添加属性和方法。</li>
+</ul>
+</li>
+<li><p>获取时间方法 ：</p>
+<ul>
+<li>Date()返回当日的日期和时间</li>
+<li>getDate()从 Date 对象返回一个月中的某一天 (1 ~ 31)</li>
+<li>getDay()从 Date 对象返回一周中的某一天 (0 ~ 6)</li>
+<li>getMonth()从 Date 对象返回月份 (0 ~ 11)</li>
+<li>getFullYear()从 Date 对象以四位数字返回年份</li>
+<li>getHours()迒回 Date 对象的小时 (0 ~ 23)</li>
+<li>getMinutes()迒回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getSeconds()迒回 Date 对象的秒数 (0 ~ 59)</li>
+<li>getMilliseconds()迒回 Date 对象的毫秒(0 ~ 999)</li>
+<li>getTime()迒回 1970 年 1 月 1 日至今的毫秒数<br><br><br><br><br><strong>获取时间的其他方法</strong><br><br><br><br></li>
+<li>getTimezoneOffset()迒回本地时间不格林威治标准时间(GMT) 的分钟差</li>
+<li>getUTCDate()根据世界时从Date 对象迒回月中的一天 (1~31)</li>
+<li>getUTCDay()根据世界时从 Date 对象迒回周中的一天 (0 ~ 6)</li>
+<li>getUTCMonth()根据世界时从 Date 对象迒回月份 (0 ~ 11)</li>
+<li>getUTCFullYear()根据世界时从 Date 对象迒回四位数的年份</li>
+<li>getUTCHours()根据世界时迒回 Date 对象的小时 (0 ~ 23)</li>
+<li>getUTCMinutes()根据世界时迒回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getUTCSeconds()根据世界时迒回 Date 对象的秒钟 (0 ~ 59)</li>
+<li>getUTCMilliseconds()根据世界时迒回 Date 对象的毫秒(0~ 999)</li>
+<li>parse()迒回1970年1月1日午夜到指定日期（字符串）的毫秒数</li>
+</ul>
+</li>
+<li><p>设置时间方法：</p>
+<ul>
+<li>setHours()设置 Date 对象中的小时 (0 ~ 23)</li>
+<li>setMinutes()设置 Date 对象中的分钟 (0 ~ 59)</li>
+<li>setSeconds()设置 Date 对象中的秒钟 (0 ~ 59)</li>
+<li>setMilliseconds()设置 Date 对象中的毫秒 (0 ~ 999)</li>
+<li>setTime()以毫秒设置 Date 对象<br><br><br><br><br><strong>设置时间的其他方法</strong><br><br><br><br></li>
+<li>setUTCDate()根据世界时设置 Date 对象中月份的一天 (1 ~ 31)</li>
+<li>setUTCMonth()根据世界时设置 Date 对象中的月份 (0 ~ 11)</li>
+<li>setUTCFullYear()根据世界时设置 Date 对象中的年份（四位数字）</li>
+<li>setUTCHours()根据世界时设置 Date 对象中的小时 (0 ~ 23)</li>
+<li>setUTCMinutes()根据世界时设置 Date 对象中的分钟 (0 ~ 59)</li>
+<li>setUTCSeconds()根据世界时设置 Date 对象中的秒钟 (0 ~ 59)</li>
+<li>setUTCMilliseconds()根据世界时设置 Date 对象中的毫秒 (0 ~ 999)</li>
+</ul>
+</li>
+<li><p>Date的其他方法:</p>
+<ul>
+<li>toSource()迒回该对象的源代码</li>
+<li>toString()把 Date 对象转换为字符串 </li>
+<li>toTimeString()把 Date 对象的时间部分转换为字符串</li>
+<li>toDateString()把 Date 对象的日期部分转换为字符串</li>
+<li>toUTCString()根据世界时，把 Date 对象转换为字符串。 </li>
+<li>toLocaleString()根据本地时间格式，把 Date 对象转换为字符串。</li>
+<li>toLocaleTimeString()根据本地时间格式，把 Date 对象的时间部分转换为字符串 </li>
+<li>toLocaleDateString()根据本地时间格式，把 Date 对象的日期部分转换为字符串。</li>
+<li>UTC()根据世界时迒回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
+<li>valueOf()迒回 Date 对象的原始值</li>
+</ul>
+</li>
+</ol>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><ol>
+<li><p>概念: </p>
+<blockquote>
+<p>正则表达式 （Regular Expression、 regex），是使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。</p>
+</blockquote>
+</li>
+<li><p>作用:</p>
+<blockquote>
+<p>测试字符串 、 替换文本 、 从字符串中匹配提取一个子字符串</p>
+</blockquote>
+</li>
+<li><p>声明方式:</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">例<span class="number">1</span>：<span class="keyword">var</span> myRegExp=<span class="regexp">/内容 /</span></div><div class="line">例<span class="number">2</span>：<span class="keyword">var</span> myRegExp= <span class="keyword">new</span> <span class="built_in">RegExp</span>(“ 内容” )</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>**注意:**
+&gt; `斜杠（/内容/）表示正则表达式的开始和结束；`
+`声明方式第一种更简短有效，通常我们都用第一种；`
+</code></pre><ol>
+<li>正则表达式方法: <ul>
+<li>test(),匹配一个字符串是否符合正则规则，成功，则迒回true</li>
+<li>match(),找到一个戒多个正则表达式的匹配</li>
+<li>replace(),替换与正则表达式匹配的子串</li>
+<li>search(),检索与正则表达式相匹配的值</li>
+<li>split(),把字符串分割为字符串数组</li>
+</ul>
+</li>
+</ol>
+<p>5 正则表达式修饰符</p>
+<ul>
+<li><p>全局匹配,修饰符g /…./g</p>
+<ul>
+<li><p>例如：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str04 = <span class="string">"aacbmaa"</span>;</div><div class="line"><span class="keyword">var</span> reg04 = <span class="regexp">/a/g</span>;</div><div class="line"><span class="built_in">document</span>.write( str04.replace(reg04, <span class="string">"m"</span>) )</div><div class="line"><span class="comment">//输出：mmcbmmm;</span></div><div class="line"><span class="comment">//如果去掉g: var reg04 = /a/;</span></div><div class="line"><span class="comment">//输出：macbmaa;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>不区分大小写,修饰符i /…../I</p>
+<blockquote>
+<p>就是将Paul和paul视为相同的字符模式</p>
+</blockquote>
+</li>
+<li><p>直接量字符</p>
+</li>
+<li>任意字符 ： [abc]</li>
+<li>范围 ： [a-z]、 [0-9]</li>
+<li>排除 ： [^a]</li>
+<li>组合 ： [a-z0-9A-Z]    </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Math-对象&quot;&gt;&lt;a href=&quot;#Math-对象&quot; class=&quot;headerlink&quot; title=&quot;Math 对象&quot;&gt;&lt;/a&gt;Math 对象&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;作用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; Javascript中，Math
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML5与CSS3权威指南(完整版)</title>
@@ -2660,30 +2837,6 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金立手机页面完成</title>
-    <link href="http://yoursite.com/2017/04/10/0501-prodoctlist/"/>
-    <id>http://yoursite.com/2017/04/10/0501-prodoctlist/</id>
-    <published>2017-04-10T09:20:51.000Z</published>
-    <updated>2017-04-10T15:14:17.792Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
-      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
