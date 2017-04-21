@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-21T01:21:52.585Z</updated>
+  <updated>2017-04-21T16:36:02.633Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,401 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DOM节点查找，事件</title>
+    <link href="http://yoursite.com/2017/04/22/DOMorEVENT/"/>
+    <id>http://yoursite.com/2017/04/22/DOMorEVENT/</id>
+    <published>2017-04-21T16:33:08.000Z</published>
+    <updated>2017-04-21T16:36:02.633Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="DOM节点查找"><a href="#DOM节点查找" class="headerlink" title="DOM节点查找"></a>DOM节点查找</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">属性名称</th>
+<th style="text-align:right">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">children</td>
+<td style="text-align:right">子节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">childNodes</td>
+<td style="text-align:right">子节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">firstChild</td>
+<td style="text-align:right">第一个子节点，包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">firstElementChild</td>
+<td style="text-align:right">第一个子节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">lastChild</td>
+<td style="text-align:right">最后一个子节点，包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">lastElementChild</td>
+<td style="text-align:right">最后一个子节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">nextSibling</td>
+<td style="text-align:right">下一个兄弟节点，包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">nextElementSibling</td>
+<td style="text-align:right">下一个兄弟节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">previousSibling</td>
+<td style="text-align:right">前一个兄弟节点，包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">previousElementSibling</td>
+<td style="text-align:right">前一个兄弟节点，不包含空节点</td>
+</tr>
+<tr>
+<td style="text-align:left">parentNode</td>
+<td style="text-align:right">父节点</td>
+</tr>
+<tr>
+<td style="text-align:left">offsetParent</td>
+<td style="text-align:right">第一个有定位属性的父节点，如果没有，则返回body</td>
+</tr>
+</tbody>
+</table>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><ul>
+<li>onload 图片或加载完成</li>
+<li>焦点事件:onfocus/onblur 获得焦点/失去焦点</li>
+<li>onchange 表单内容发送改变</li>
+<li>onclick 点击</li>
+<li>ondblclick 点击两次 </li>
+<li>onkeydown 键盘按下</li>
+<li>onkeyup 键盘抬起</li>
+<li></li>
+<li><p>获取对象 、 兼容处理</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line"><span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line"><span class="comment">//获取事件对象兼容处理，一般浏览器直接在function参</span></div><div class="line"><span class="comment">//数ev获取,ie浏览器通过window.event获取</span></div><div class="line"><span class="built_in">document</span>.write(ev.keyCode);&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>键盘event对象属性 keyCode</p>
+</li>
+<li>onmousedown 鼠标按下</li>
+<li>onmouseup 鼠标抬起</li>
+<li>onmousemove 鼠标移动</li>
+<li>onmouseover 移到对象上</li>
+<li>onmouseout 鼠标离开</li>
+<li>鼠标event对象属性 clientX clientY</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;DOM节点查找&quot;&gt;&lt;a href=&quot;#DOM节点查找&quot; class=&quot;headerlink&quot; title=&quot;DOM节点查找&quot;&gt;&lt;/a&gt;DOM节点查找&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;属性名称
+    
+    </summary>
+    
+      <category term="前端主流框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="angular" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/angular/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式2,DOM</title>
+    <link href="http://yoursite.com/2017/04/22/zhengzeORdom/"/>
+    <id>http://yoursite.com/2017/04/22/zhengzeORdom/</id>
+    <published>2017-04-21T16:32:18.000Z</published>
+    <updated>2017-04-21T16:37:55.524Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="正则表达式-2"><a href="#正则表达式-2" class="headerlink" title="正则表达式    2"></a>正则表达式    2</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:right">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:right">换行符</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:right">回车符</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:right">制表符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:right">换页符</td>
+</tr>
+<tr>
+<td style="text-align:left">\cX</td>
+<td style="text-align:right">与x对应的控制字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:right">垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:right">退格符</td>
+</tr>
+<tr>
+<td style="text-align:left">\0</td>
+<td style="text-align:right">空字符””</td>
+</tr>
+<tr>
+<td style="text-align:left">.(点)</td>
+<td style="text-align:right">匹配除换行符之外的任一个字符，IE下[^\n],其他[^\n\r]</td>
+</tr>
+<tr>
+<td style="text-align:left">\d</td>
+<td style="text-align:right">匹配数字[0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td style="text-align:right">匹配非数字字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td style="text-align:right">匹配字母数字和下划线[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td style="text-align:left">\W</td>
+<td style="text-align:right">匹配除字母数字下划线之外的字符 [^azA-Z0-9_]</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:right">匹配一个空白字符 [ \n\r\t\f\x0B]</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:right">匹配一个非空白字符 [^ \n\r\t\f\x0B]</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:right">独立部分（起始、结束、空格）</td>
+</tr>
+<tr>
+<td style="text-align:left">\B</td>
+<td style="text-align:right">非独立部分</td>
+</tr>
+<tr>
+<td style="text-align:left">\1</td>
+<td style="text-align:right">第一个匹配子项的重复匹配</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">量词</th>
+<th style="text-align:right">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">{n,m}</td>
+<td style="text-align:right">至少出现n次，最多m次</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,}</td>
+<td style="text-align:right">至少出现n次，</td>
+</tr>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:right">任意次{0，}</td>
+</tr>
+<tr>
+<td style="text-align:left">？</td>
+<td style="text-align:right">零次或者一次{0,1}</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:right">一次或任意次{1,}</td>
+</tr>
+<tr>
+<td style="text-align:left">{n}</td>
+<td style="text-align:right">正好n次</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//例子</span></div><div class="line"><span class="comment">//？ 零次或一次 &#123;0,1&#125;</span></div><div class="line">	<span class="keyword">var</span> reg09 = <span class="regexp">/a?/</span>;</div><div class="line">	<span class="built_in">document</span>.write( reg09.test(<span class="string">"aabbcc"</span>) +<span class="string">"&lt;/br&gt;"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li><p>首尾</p>
+<ul>
+<li><p><strong>^</strong>匹配起始位置</p>
+<blockquote>
+<p>例：/^a/－表示须以字母a开始</p>
+</blockquote>
+</li>
+<li><p><strong>$</strong> 匹配结束位置</p>
+<blockquote>
+<p>例：/t$/－表示须以字母t结尾</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>选择分组与引用</p>
+<ul>
+<li>分组用()</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">常用正则表达式</th>
+<th style="text-align:right">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[\u4e00-\u9fa5]</td>
+<td style="text-align:right">匹配中文</td>
+</tr>
+<tr>
+<td style="text-align:left">^\s*</td>
+<td style="text-align:right">\s*$</td>
+<td>行首行尾空格</td>
+</tr>
+<tr>
+<td style="text-align:left">^\w+@[a-z0-9]+(.[a-z]+){1,3}$</td>
+<td style="text-align:right">EMAIL</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-zA-z]+://[^\s]*</td>
+<td style="text-align:right">网址</td>
+</tr>
+<tr>
+<td style="text-align:left">[1-9][0-9]{4,9}</td>
+<td style="text-align:right">QQ号</td>
+</tr>
+<tr>
+<td style="text-align:left">[1-9]\d{5}</td>
+<td style="text-align:right">邮政编码</td>
+</tr>
+<tr>
+<td style="text-align:left">[1-9]\d{5}</td>
+<td style="text-align:right">邮政编码</td>
+</tr>
+<tr>
+<td style="text-align:left">[1-9]\d{14}</td>
+<td style="text-align:right">[1-9]\d{17}</td>
+<td>[1-9]\d{16}x</td>
+<td>身份证号</td>
+</tr>
+</tbody>
+</table>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><ul>
+<li>分析DOM节点<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>DOM 教程<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>DOM 第一节<span class="tag">&lt;/<span class="name">h1</span>&gt;</span> 、</div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>分析父、子和同胞节点：·<code>&lt;html&gt;</code> 节点没有父节点，它是根节点</p>
+<p><code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code> 的父节点是<code>&lt;html&gt;</code> 节点 ；文本节点 “ Hello world!”的父节点是 <code>&lt;p&gt;</code> 节点</p>
+</blockquote>
+<ul>
+<li><p>获取节点</p>
+<ul>
+<li>由id获取 <code>getElementById</code><ul>
+<li>语法：<code>node.getElementById(&quot;id&quot;);</code></li>
+<li>例: <code>document.getElementById(&quot;intro&quot;);</code></li>
+</ul>
+</li>
+<li>由class获取 <code>getElementsByClassName</code><ul>
+<li>语法：<code>node. getElementsByClassName(&quot;class&quot;);</code></li>
+<li>例：<code>document. getElementsByClassName(&quot; class &quot;);</code></li>
+</ul>
+</li>
+<li>由标签名获取 <code>getElementsByTagName</code><ul>
+<li>语法：<code>node. getElementsByTagName(“h1 &quot;);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>查看节点类型</p>
+<ul>
+<li><p>语法：</p>
+<blockquote>
+<p><code>nodeObject.[nodeType][nodeName ][nodeValue ]</code></p>
+</blockquote>
+</li>
+<li><p>nodeType 返回以数字值返回指定节点的节点类型。如果节点是元素节点，则返回 1。如果节点是属性节点，则返回 2。</p>
+</li>
+<li>nodeName 返回节点名称（大写的标签名）</li>
+<li>nodeValue 文本节点返回文本内容，其他节点返回null</li>
+</ul>
+</li>
+<li><p>DOM属性获取与设置</p>
+<ul>
+<li>获取方法：<ul>
+<li>element[attributename]</li>
+<li>element . attributename</li>
+<li>getAttribute( attributename )</li>
+</ul>
+</li>
+<li>设置属性：<ul>
+<li>setAttribute( attributename, attri</li>
+</ul>
+</li>
+<li>删除属性：<ul>
+<li>removeAttribute( attributename)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常用属性：</p>
+<ul>
+<li>className 类名</li>
+<li>offsetWidth 宽</li>
+<li>offsetHeight 高</li>
+<li>offsetLeft,offsetTop获取距离第一个定位父节点左上角的距离</li>
+</ul>
+</li>
+<li><p>操作子节点<br>创建节点 createElement( )<br>子节点的增删改</p>
+<ul>
+<li>appendChild 在DOM子集最后添加子节点</li>
+<li>insertBefore 在指定的已有子节点之前插入新的子节点</li>
+<li>removeChild 删除一个节点</li>
+<li>replaceChild 替换节点</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;正则表达式-2&quot;&gt;&lt;a href=&quot;#正则表达式-2&quot; class=&quot;headerlink&quot; title=&quot;正则表达式    2&quot;&gt;&lt;/a&gt;正则表达式    2&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left
+    
+    </summary>
+    
+      <category term="前端主流框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="angular" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/angular/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
+    
+  </entry>
   
   <entry>
     <title>Math对象,Date对象,正则表达式</title>
@@ -2556,269 +2951,6 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 <li>Continue语句 开始下一次循环</li>
 </ul>
 </blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;
-    
-    </summary>
-    
-      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javascript基本对象,数据类型,常量,变量</title>
-    <link href="http://yoursite.com/2017/04/10/07-01-javascript/"/>
-    <id>http://yoursite.com/2017/04/10/07-01-javascript/</id>
-    <published>2017-04-10T13:30:16.000Z</published>
-    <updated>2017-04-10T15:14:32.583Z</updated>
-    
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33162226&auto=1&height=66"></iframe></p>
-<h1 id="javascript基本对象-数据类型-常量-变量"><a href="#javascript基本对象-数据类型-常量-变量" class="headerlink" title="javascript基本对象,数据类型,常量,变量"></a>javascript基本对象,数据类型,常量,变量</h1><h2 id="javascript数据类型"><a href="#javascript数据类型" class="headerlink" title="javascript数据类型"></a>javascript数据类型</h2><ul>
-<li>基本数据类型<ol>
-<li>Number</li>
-<li>String</li>
-<li>Boolean</li>
-<li>Null</li>
-<li>Undefined</li>
-</ol>
-</li>
-<li>混合数据类型<ul>
-<li>Object</li>
-</ul>
-</li>
-<li>js中变量是松散类型的，因此有时我们需要检测变量的数据类型</li>
-<li>typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）</li>
-</ul>
-<h3 id="数字-Number"><a href="#数字-Number" class="headerlink" title="数字(Number)"></a>数字(Number)</h3><ul>
-<li><p>介绍Number类型包含整数和浮点数（浮点数数值必须包含一个小数点，且小数点后面至少有一位数字）两种值</p>
-<blockquote>
-<p>例如:<code>var x1=34.00</code>; //使用小数点来写<br><code>var x2=34</code>; //不使用小数点来写</p>
-</blockquote>
-</li>
-<li><p>极大或极小的数字可以通过科学（指数）计数法来书写：</p>
-<blockquote>
-<p>例：<code>var y=123e5; // 12300000</code><br><code>var z=123e-5; // 0.00123</code></p>
-</blockquote>
-</li>
-<li><p>NaN:非数字类型</p>
-<ul>
-<li>特点：涉及到的 任何关于NaN的操作，都会返回NaN</li>
-<li>NaN不等于自身。<blockquote>
-<p>例：<code>var ab = &quot;a1&quot;;</code><br><code>console.log(ab/10);// NaN</code><br><code>console.log(NaN == NaN);// false;</code></p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>###字符串（string）</p>
-<blockquote>
-<p>例：<code>var carname=&quot;Bill Gates&quot;;</code><br><code>var answer=&quot;He is called &#39;Johnny&#39;&quot;;</code></p>
-</blockquote>
-<ul>
-<li>字符串是存储字符（比如 “Bill Gates”）的变量。</li>
-<li>字符串可以是引号中的任意文本，可以使用单引号或双引号，只要不匹配包围字符串的引号即可</li>
-<li><strong>注： JavaScript对大小写敏感</strong></li>
-</ul>
-<p>###布尔（boolean）</p>
-<blockquote>
-<p>例：<code>var x=true</code><br><code>var y=false</code></p>
-<ul>
-<li>布尔（逻辑）只能有两个值：<strong><code>true</code></strong> 或 <strong><code>false</code></strong>。</li>
-</ul>
-</blockquote>
-<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h3><ul>
-<li>Undefined 这个值表示变量不含有值。<br>*　可以通过将变量的值设置为 null 来清空变量</li>
-</ul>
-<h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><ul>
-<li>null类型被看做空对象指针，null类型也是空的对象引用。<br>只有一个值，即null值，所以，在用typeof 操作符去检测<br>null类型的值时，结果是object类型。<br>如果你定义了一个变量，但是想在以后把这个变量当做一<br>个对象来用，那么最好将该对象初始化为null值</li>
-</ul>
-<p>###对象（object）</p>
-<ul>
-<li><p>对象由花括号分隔。在括号内部，对象的属性以名称和<br>值对的形式 (name : value) 来定义。属性由逗号分隔：</p>
-<blockquote>
-<p>例：var person={<br>firstname : “Bill”,<br>lastname : “Gates“<br>};</p>
-</blockquote>
-</li>
-<li><p>数组为混合数据类型中的一种</p>
-</li>
-</ul>
-<h2 id="常量Constant：不变的值"><a href="#常量Constant：不变的值" class="headerlink" title="常量Constant：不变的值"></a>常量Constant：不变的值</h2><ul>
-<li><p><code>const constantName = value1；</code></p>
-<blockquote>
-<p>常量名首字符为字母或下划线，其后可有数字。 value1为直接量或表达式。</p>
-</blockquote>
-</li>
-<li><p>1个const关键字可定义1个或多个常量。</p>
-</li>
-<li>内置常量：JS中Infinity表无穷大的数值，-indinity表无穷小.NaN表非数值。<blockquote>
-<p>例：const a = 10;<br> alert(a)</p>
-</blockquote>
-</li>
-</ul>
-<p>##变量</p>
-<ul>
-<li>概念:变量是存取数字、提供存放信息的容器。对于变量，必须明确变量的命名、变量的类型、变量的声明及其变量的作用域。命名规范</li>
-<li><p>变量命名规范:</p>
-<ul>
-<li>变量必须以字母或下划线开头，后可以跟字母、数字、下划线，不能有空格或特殊字符等。</li>
-<li>不用使用Javascript中的关键字作为变量，如var,true,double等。</li>
-<li>在对变量命名时，最好把变量的意义与其代表的意思对应起来，以免发现错误。</li>
-</ul>
-</li>
-<li><p>变量的类型：</p>
-<ul>
-<li>整数变量：x=100;</li>
-<li>字符串变量：y=“125”</li>
-<li>布尔型变量：xy=True</li>
-<li>实型变量：cost=19.5</li>
-</ul>
-</li>
-<li><p>变量的声明</p>
-<ul>
-<li>JavaScript可以在使用前先声明，并可赋值。变量声明用可用命令<code>var</code>;<blockquote>
-<p>例：<code>var mytest;</code><br>该例子定义了一个mytest变量，但没有赋予其值<br>例：var mytest=“This is a book”<br>该例子定义了变量并为其赋予了值。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>变量的作用域：</p>
-<ul>
-<li>变量分为全局变量和局部变量。<ul>
-<li>全局变量是定义在所有函数体乊外，其作用范围是整个函数</li>
-</ul>
-</li>
-<li>局部变量是定义在函数体乊内，只对其该函数是可见的，而对其它函数则是不可见的。</li>
-<li>函数体内可以访问父级函数的变量，父级函数不能访问子函数的变量。<br><strong>注：在声明变量时凡是没有var关键字，而直接赋值的变量均为全局变量</strong></li>
-</ul>
-</li>
-</ul>
-<p>##　JavaScript 的基本对象</p>
-<blockquote>
-<p>对象包括：系统标准类对象 和 自定义对象</p>
-</blockquote>
-<ul>
-<li>标准类对象:<ul>
-<li>字符串对象String、</li>
-<li>日期对象Date、</li>
-<li>数组对象Array、</li>
-<li>数字对象Number 、</li>
-<li>数学对象Math、</li>
-<li>正则表达式对象RegExp</li>
-</ul>
-</li>
-</ul>
-<p>*自定义类对象:自定义的包含属性和方法的对象</p>
-<pre><code class="javascript">
-例：<span class="keyword">var</span> person={
-<span class="attr">firstname</span> : <span class="string">"Bill"</span>,
-<span class="attr">lastname</span> : <span class="string">"Gates"</span>,
-<span class="attr">eat</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{}
-};
-</code></pre>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;
-    
-    </summary>
-    
-      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基础引入</title>
-    <link href="http://yoursite.com/2017/04/10/06-01-javascript/"/>
-    <id>http://yoursite.com/2017/04/10/06-01-javascript/</id>
-    <published>2017-04-10T13:26:57.000Z</published>
-    <updated>2017-04-10T15:14:24.456Z</updated>
-    
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27583305&auto=1&height=66"></iframe></p>
-<h1 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a>javascript基础</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
-<li>轻量级、直译式客户端脚本语言。</li>
-<li>可被所有浏览器执行，实现网页的劢态功能。</li>
-<li>揑入 HTML 页面后，可由所有的现代浏览器执行<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2></li>
-<li>操作页面元素，动态改变页面内容动态改变表格内容</li>
-<li>编写页面动态效果轮播图层的切换 和 树形菜单等</li>
-<li>数据的客户端验证－减轻服务器端压力注册表单验证</li>
-<li>通过ajax和后端语言实现数据交互</li>
-</ul>
-<h2 id="组成"><a href="#组成" class="headerlink" title="组成:"></a>组成:</h2><ol>
-<li>ECMAScript</li>
-<li>BOM</li>
-<li>DOM</li>
-</ol>
-<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h2><ul>
-<li>概念：JavaScript的核心，描述了语言的基本语法和数据类<br>型，ECMAScript是一套标准，定义了一种语言（比如JS）<br>是什么样子。</li>
-<li>编码遵循ECMAScript标准</li>
-</ul>
-<h2 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM(浏览器对象模型)"></a>BOM(浏览器对象模型)</h2><ul>
-<li>概念:BOM是用于描述这种对象不对象乊间层次关系的模型，浏览器对象模型提供了独立于内容的、可以不浏览器窗口进行互劢的对象结构。 BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</li>
-</ul>
-<h3 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM(文档对象模型)"></a>DOM(文档对象模型)</h3><ul>
-<li>概念:W3C组织推荐的处理可扩展置标语言的标准编程接口。 DOM是以面向对象方式描述的文档模型。 DOM定义了表示和修改文档所需的对象、这些对象的行为和属性以及这些对象乊间的关系。可以把DOM认为是页面上数据和结构的一个树形表示，丌过页面当然可能并丌是以这种树的方式具体实现。</li>
-</ul>
-<p>##javascript 使用方法</p>
-<ul>
-<li><p>html内嵌javascript代码</p>
-<blockquote>
-<p><code>&lt;script type=&quot;text/javascript&quot;&gt; //JavaScript 语句&lt;/script &gt;</code></p>
-</blockquote>
-</li>
-<li><p>外部JS文件</p>
-<blockquote>
-<p><code>&lt;script src=&quot;hello.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;</code></p>
-</blockquote>
-</li>
-<li><p>行内编写方式</p>
-<blockquote>
-<p><code>&lt;input name=&quot;btn&quot; type=&quot;button&quot; value=&quot;弹出消息框&quot;onclick=&quot;javascript:alert(&#39;欢迎你&#39;);&quot;/&gt;</code></p>
-</blockquote>
-</li>
-</ul>
-<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><ul>
-<li>onload事件:是在页面或图片加载完成后立即执行的事件获取元素</li>
-<li>getElementById()：获取指定 ID 的第一个对象引用</li>
-<li>getElementsByName()：通过NAME属性获Document中指定名称对象的集合</li>
-<li>getElementsByTagName()：使用指定的标签名返回所有的元<br>素，这些元素是您在使用此方法时所处的元素的后代</li>
-</ul>
-<h2 id="JavaScript-的调试工具及调试方法"><a href="#JavaScript-的调试工具及调试方法" class="headerlink" title="JavaScript 的调试工具及调试方法"></a>JavaScript 的调试工具及调试方法</h2><ul>
-<li>调试工具:Firebug工具</li>
-<li>安装：火狐浏览器 - 选顷 – 附加组件 – 搜索Firebug添加即可。安装完成，按键盘f12即可打开Firebug</li>
-<li>Chrome和ie自带调试工具，不需要安装</li>
-<li>调试方法<ol>
-<li>使用Firebug的HTML 、 CSS、脚本顷查看页面的html标签、 CSS文件、 JS文件。</li>
-<li>Firebug控制台:<ol>
-<li>如果页面报错，会在控制台显示：包括错误原因和行号</li>
-<li>控制台最下边的输入框可以输入js代码，提交浏览器执行</li>
-</ol>
-</li>
-<li>利用js的console方法，可以在控制台输出js代码中的值、对象、 DOM等，以方便查看对象的结构<br>常用方法：console.log() console.dir()</li>
-</ol>
-</li>
-</ul>
 ]]></content>
     
     <summary type="html">
