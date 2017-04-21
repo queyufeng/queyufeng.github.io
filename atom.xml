@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-21T16:36:02.633Z</updated>
+  <updated>2017-04-21T17:18:56.498Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/04/22/DOMorEVENT/"/>
     <id>http://yoursite.com/2017/04/22/DOMorEVENT/</id>
     <published>2017-04-21T16:33:08.000Z</published>
-    <updated>2017-04-21T16:36:02.633Z</updated>
+    <updated>2017-04-21T17:18:56.498Z</updated>
     
     <content type="html"><![CDATA[<h1 id="DOM节点查找"><a href="#DOM节点查找" class="headerlink" title="DOM节点查找"></a>DOM节点查找</h1><table>
 <thead>
@@ -112,14 +112,16 @@
     
     </summary>
     
-      <category term="前端主流框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/"/>
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="angular" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/angular/"/>
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   
@@ -128,7 +130,7 @@
     <link href="http://yoursite.com/2017/04/22/zhengzeORdom/"/>
     <id>http://yoursite.com/2017/04/22/zhengzeORdom/</id>
     <published>2017-04-21T16:32:18.000Z</published>
-    <updated>2017-04-21T16:37:55.524Z</updated>
+    <updated>2017-04-21T17:18:54.647Z</updated>
     
     <content type="html"><![CDATA[<h1 id="正则表达式-2"><a href="#正则表达式-2" class="headerlink" title="正则表达式    2"></a>正则表达式    2</h1><table>
 <thead>
@@ -399,14 +401,16 @@
     
     </summary>
     
-      <category term="前端主流框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/"/>
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="angular" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/angular/"/>
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   
