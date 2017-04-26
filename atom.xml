@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-21T17:18:56.498Z</updated>
+  <updated>2017-04-25T14:16:51.658Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>1510_shijain__shijianmaopao</title>
+    <link href="http://yoursite.com/2017/04/25/1510-shijain-shijianmaopao/"/>
+    <id>http://yoursite.com/2017/04/25/1510-shijain-shijianmaopao/</id>
+    <published>2017-04-25T14:16:51.000Z</published>
+    <updated>2017-04-25T14:16:51.658Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>DOM节点查找，事件</title>
     <link href="http://yoursite.com/2017/04/22/DOMorEVENT/"/>
     <id>http://yoursite.com/2017/04/22/DOMorEVENT/</id>
     <published>2017-04-21T16:33:08.000Z</published>
-    <updated>2017-04-21T17:18:56.498Z</updated>
+    <updated>2017-04-25T14:35:13.184Z</updated>
     
     <content type="html"><![CDATA[<h1 id="DOM节点查找"><a href="#DOM节点查找" class="headerlink" title="DOM节点查找"></a>DOM节点查找</h1><table>
 <thead>
@@ -36,7 +50,7 @@
 </tr>
 <tr>
 <td style="text-align:left">childNodes</td>
-<td style="text-align:right">子节点，不包含空节点</td>
+<td style="text-align:right">子节点，包含空节点</td>
 </tr>
 <tr>
 <td style="text-align:left">firstChild</td>
@@ -81,7 +95,7 @@
 </tbody>
 </table>
 <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><ul>
-<li>onload 图片或加载完成</li>
+<li>onload 图片或页面加载完成</li>
 <li>焦点事件:onfocus/onblur 获得焦点/失去焦点</li>
 <li>onchange 表单内容发送改变</li>
 <li>onclick 点击</li>
@@ -100,7 +114,28 @@
 <li>onmouseover 移到对象上</li>
 <li>onmouseout 鼠标离开</li>
 <li>鼠标event对象属性 clientX clientY</li>
+<li>onselect 在文本框中的文本被选中时发生,支持<code>&lt;input type=&quot;text&quot;&gt;</code>, <code>&lt;textarea&gt;</code></li>
+<li>onsubmit 在表单中的提交按钮被点击时触发</li>
+<li>onreset 在表单中的重置按钮被点击时触发</li>
+<li>onerror 在文档或图像加载过程中发生错误时被触发</li>
+<li>阻止默认事件<code>preventDefault() 或者 return false；</code></li>
 </ul>
+<h1 id="事件的触发机制"><a href="#事件的触发机制" class="headerlink" title="事件的触发机制"></a>事件的触发机制</h1><p>事件的触发机制</p>
+<blockquote>
+<p>上一级标签开始往下查找，直到捕获到事件目标(target)。</p>
+</blockquote>
+<p>事件冒泡阶段：</p>
+<blockquote>
+<p>事件从事件目标(target)开始，往上冒泡直到页面的最上一级标签。</p>
+</blockquote>
+<h1 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h1><p>冒泡详解：</p>
+<blockquote>
+<p>如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播,不是所有的事件都能冒泡。 blur、 focus、 load和unload不能像其它事件一样冒泡。</p>
+</blockquote>
+<p>阻止冒泡 </p>
+<blockquote>
+<p>IE中使用cancelBubble=true，Firefox中使用stopPropation()</p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
@@ -419,7 +454,7 @@
     <link href="http://yoursite.com/2017/04/21/MathDate/"/>
     <id>http://yoursite.com/2017/04/21/MathDate/</id>
     <published>2017-04-21T01:19:19.000Z</published>
-    <updated>2017-04-21T01:21:52.585Z</updated>
+    <updated>2017-04-25T14:25:10.102Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Math-对象"><a href="#Math-对象" class="headerlink" title="Math 对象"></a>Math 对象</h1><ol>
 <li><p>作用：</p>
@@ -459,7 +494,7 @@
 </li>
 <li><p>属性</p>
 <ul>
-<li>constructor迒回对创建此对象的 Date 函数的引用</li>
+<li>constructor返回对创建此对象的 Date 函数的引用</li>
 <li>prototype使您有能力向对象添加属性和方法。</li>
 </ul>
 </li>
@@ -470,21 +505,21 @@
 <li>getDay()从 Date 对象返回一周中的某一天 (0 ~ 6)</li>
 <li>getMonth()从 Date 对象返回月份 (0 ~ 11)</li>
 <li>getFullYear()从 Date 对象以四位数字返回年份</li>
-<li>getHours()迒回 Date 对象的小时 (0 ~ 23)</li>
-<li>getMinutes()迒回 Date 对象的分钟 (0 ~ 59)</li>
-<li>getSeconds()迒回 Date 对象的秒数 (0 ~ 59)</li>
-<li>getMilliseconds()迒回 Date 对象的毫秒(0 ~ 999)</li>
-<li>getTime()迒回 1970 年 1 月 1 日至今的毫秒数<br><br><br><br><br><strong>获取时间的其他方法</strong><br><br><br><br></li>
-<li>getTimezoneOffset()迒回本地时间不格林威治标准时间(GMT) 的分钟差</li>
-<li>getUTCDate()根据世界时从Date 对象迒回月中的一天 (1~31)</li>
-<li>getUTCDay()根据世界时从 Date 对象迒回周中的一天 (0 ~ 6)</li>
-<li>getUTCMonth()根据世界时从 Date 对象迒回月份 (0 ~ 11)</li>
-<li>getUTCFullYear()根据世界时从 Date 对象迒回四位数的年份</li>
-<li>getUTCHours()根据世界时迒回 Date 对象的小时 (0 ~ 23)</li>
-<li>getUTCMinutes()根据世界时迒回 Date 对象的分钟 (0 ~ 59)</li>
-<li>getUTCSeconds()根据世界时迒回 Date 对象的秒钟 (0 ~ 59)</li>
-<li>getUTCMilliseconds()根据世界时迒回 Date 对象的毫秒(0~ 999)</li>
-<li>parse()迒回1970年1月1日午夜到指定日期（字符串）的毫秒数</li>
+<li>getHours()返回 Date 对象的小时 (0 ~ 23)</li>
+<li>getMinutes()返回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getSeconds()返回 Date 对象的秒数 (0 ~ 59)</li>
+<li>getMilliseconds()返回 Date 对象的毫秒(0 ~ 999)</li>
+<li>getTime()返回 1970 年 1 月 1 日至今的毫秒数<br><br><br><br><br><strong>获取时间的其他方法</strong><br><br><br><br></li>
+<li>getTimezoneOffset()返回本地时间不格林威治标准时间(GMT) 的分钟差</li>
+<li>getUTCDate()根据世界时从Date 对象返回月中的一天 (1~31)</li>
+<li>getUTCDay()根据世界时从 Date 对象返回周中的一天 (0 ~ 6)</li>
+<li>getUTCMonth()根据世界时从 Date 对象返回月份 (0 ~ 11)</li>
+<li>getUTCFullYear()根据世界时从 Date 对象返回四位数的年份</li>
+<li>getUTCHours()根据世界时返回 Date 对象的小时 (0 ~ 23)</li>
+<li>getUTCMinutes()根据世界时返回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getUTCSeconds()根据世界时返回 Date 对象的秒钟 (0 ~ 59)</li>
+<li>getUTCMilliseconds()根据世界时返回 Date 对象的毫秒(0~ 999)</li>
+<li>parse()返回1970年1月1日午夜到指定日期（字符串）的毫秒数</li>
 </ul>
 </li>
 <li><p>设置时间方法：</p>
@@ -505,7 +540,7 @@
 </li>
 <li><p>Date的其他方法:</p>
 <ul>
-<li>toSource()迒回该对象的源代码</li>
+<li>toSource()返回该对象的源代码</li>
 <li>toString()把 Date 对象转换为字符串 </li>
 <li>toTimeString()把 Date 对象的时间部分转换为字符串</li>
 <li>toDateString()把 Date 对象的日期部分转换为字符串</li>
@@ -513,8 +548,8 @@
 <li>toLocaleString()根据本地时间格式，把 Date 对象转换为字符串。</li>
 <li>toLocaleTimeString()根据本地时间格式，把 Date 对象的时间部分转换为字符串 </li>
 <li>toLocaleDateString()根据本地时间格式，把 Date 对象的日期部分转换为字符串。</li>
-<li>UTC()根据世界时迒回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
-<li>valueOf()迒回 Date 对象的原始值</li>
+<li>UTC()根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
+<li>valueOf()返回 Date 对象的原始值</li>
 </ul>
 </li>
 </ol>
@@ -538,7 +573,7 @@
 `声明方式第一种更简短有效，通常我们都用第一种；`
 </code></pre><ol>
 <li>正则表达式方法: <ul>
-<li>test(),匹配一个字符串是否符合正则规则，成功，则迒回true</li>
+<li>test(),匹配一个字符串是否符合正则规则，成功，则返回true</li>
 <li>match(),找到一个戒多个正则表达式的匹配</li>
 <li>replace(),替换与正则表达式匹配的子串</li>
 <li>search(),检索与正则表达式相匹配的值</li>
@@ -2847,114 +2882,6 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> i = arr.length, j;</div><div class="line"><span class="keyword">var</span> tempExchangVal;</div><div class="line"><span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123;</div><div class="line">	<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i - <span class="number">1</span>; j++) &#123;</div><div class="line"><span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</div><div class="line">tempExchangVal = arr[j];      </div><div class="line">arr[j] = arr[j + <span class="number">1</span>];</div><div class="line">arr[j + <span class="number">1</span>] = tempExchangVal;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">i--;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </code></pre><h1 id="城市二级联动"><a href="#城市二级联动" class="headerlink" title="城市二级联动:"></a>城市二级联动:</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></div><div class="line">          <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">id</span>=<span class="string">"gametype"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"aa"</span>&gt;</span>游戏分类<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">id</span>=<span class="string">"gamelist"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>游戏名称<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line">     <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">         <span class="keyword">var</span> game = <span class="keyword">new</span> <span class="built_in">Array</span>( );</div><div class="line"></div><div class="line">         game[<span class="string">'纸牌游戏'</span>]=[<span class="string">'斗地主'</span>, <span class="string">'拖拉机'</span>, <span class="string">'桥牌'</span>, <span class="string">'拱猪'</span>, <span class="string">'打百分'</span>];</div><div class="line">         game[<span class="string">'棋类游戏'</span>]=[<span class="string">'军棋'</span>, <span class="string">'跳棋'</span>, <span class="string">'五子棋'</span>, <span class="string">'围棋'</span>, <span class="string">'中国象棋'</span>, <span class="string">'国际象棋'</span>, <span class="string">'飞行棋'</span>, <span class="string">'黑白棋'</span>];</div><div class="line">         game[<span class="string">'其他游戏'</span>] = [<span class="string">'连连看'</span>, <span class="string">'俄罗斯方块'</span>, <span class="string">'麻将'</span>, <span class="string">'台球'</span>, <span class="string">'挑错'</span>];</div><div class="line"></div><div class="line"></div><div class="line">         <span class="comment">//</span></div><div class="line">         <span class="keyword">var</span> gametype=<span class="built_in">document</span>.getElementById(<span class="string">"gametype"</span>)</div><div class="line">         <span class="keyword">for</span>(<span class="keyword">var</span> x <span class="keyword">in</span> game)&#123;</div><div class="line"></div><div class="line">             gametype.add(<span class="keyword">new</span> Option(x,x))</div><div class="line">         &#125;</div><div class="line">        gametype.onchange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line"></div><div class="line">             <span class="keyword">var</span>  gamelist=<span class="built_in">document</span>.getElementById(<span class="string">"gamelist"</span>)</div><div class="line">             gamelist.options.length=<span class="number">0</span>;</div><div class="line">             <span class="keyword">var</span>  gametypevalue=gametype.value;</div><div class="line"></div><div class="line">             <span class="keyword">for</span>(<span class="keyword">var</span> j <span class="keyword">in</span> game)&#123;</div><div class="line">              <span class="keyword">if</span>(j==gametypevalue)&#123;</div><div class="line"></div><div class="line">                  <span class="keyword">for</span>(<span class="keyword">var</span> f=<span class="number">0</span>;f&lt;game[j].length;f++)&#123;</div><div class="line">                      <span class="built_in">console</span>.log(game[j]);</div><div class="line">                      <span class="built_in">console</span>.log(game[j][f]);</div><div class="line">                      gamelist.add(<span class="keyword">new</span> Option(game[j][f],game[j][f]))</div><div class="line">                  &#125;</div><div class="line"></div><div class="line"></div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line"></div><div class="line">         &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;
-    
-    </summary>
-    
-      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS赋值 运算比较 流程控制</title>
-    <link href="http://yoursite.com/2017/04/10/0801-javascript/"/>
-    <id>http://yoursite.com/2017/04/10/0801-javascript/</id>
-    <published>2017-04-10T14:48:08.000Z</published>
-    <updated>2017-04-17T06:06:12.961Z</updated>
-    
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=31445554&auto=1&height=66"></iframe></p>
-<h1 id="JS赋值-运算比较-流程控制"><a href="#JS赋值-运算比较-流程控制" class="headerlink" title="JS赋值 运算比较 流程控制"></a>JS赋值 运算比较 流程控制</h1><h2 id="变量的声明与赋值"><a href="#变量的声明与赋值" class="headerlink" title="变量的声明与赋值"></a>变量的声明与赋值</h2><ul>
-<li><p>先声明变量再赋值</p>
-<blockquote>
-<p><code>var width</code>      <code>width=5</code><br><code>var</code> － 用于声明变量的关键字<br><code>width</code> － 变量名</p>
-</blockquote>
-</li>
-<li><p>同时声明和赋值变量</p>
-<blockquote>
-<p><code>var catName= “ 皮皮”; var x, y, z = 10;</code> </p>
-</blockquote>
-</li>
-<li><p>不声明直接赋值</p>
-<blockquote>
-<p><code>width=5</code></p>
-</blockquote>
-</li>
-</ul>
-<h2 id="JS运算"><a href="#JS运算" class="headerlink" title="JS运算"></a>JS运算</h2><h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><ul>
-<li>算数运算符(+,-,*,/,%,++,–)</li>
-<li>赋值运算符(=,+=,-=,*=,/=,%=)</li>
-<li>字符串连接符(+)</li>
-<li>优先级:<blockquote>
-<p>优先级：（）&gt;算术运算符（先乘除后加减）&gt;赋值运算符</p>
-<h2 id="JS比较"><a href="#JS比较" class="headerlink" title="JS比较"></a>JS比较</h2><h3 id="比较符号"><a href="#比较符号" class="headerlink" title="比较符号"></a>比较符号</h3></blockquote>
-</li>
-<li>比较运算符(&gt;,&lt;,&gt;=,&lt;=,==,===,!=,!==)</li>
-<li>逻辑运算符(&amp;&amp;,||,!)</li>
-<li><p>三目运算符:</p>
-<blockquote>
-<p> 条件?语句1:语句2</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="JS-流程控制"><a href="#JS-流程控制" class="headerlink" title="JS 流程控制"></a>JS 流程控制</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h3><blockquote>
-<p>所谓的“流程”就是程序代码执行的顺序。在任何一种语言中，程序控制是必需的。它能使整个程序减少混乱，使之顺利按照其一定的方式执行。 JavaScript常用的控制流程有3种基本结构：<strong>顺序结构</strong>、<strong>选择结构</strong>、<strong>循环结构顺序结构</strong>,正常情况下，程序中的语句是按照书写顺序执行的，这种结构成为顺序结构。前面所例丼的程序都是顺序结构的程序。</p>
-</blockquote>
-<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><blockquote>
-<p>选择结构主要用判断语句来实现根据一定的条件决定进一步执行那些语句。 JavaScript提供了两种类型的选择结果语句，也成为判断语句：<code>if语句</code>和<code>switch语句</code>。一般来讲if语句用于从两条执行路线中选择其一执行,而switch语句用于从多条执行路线中选择其一执行。</p>
-</blockquote>
-<ul>
-<li><p>if语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件)&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>If条件语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件)&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>If…else if…else语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (条件 <span class="number">1</span>)</div><div class="line">&#123;</div><div class="line">当条件 <span class="number">1</span> 为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span> <span class="keyword">if</span> (条件 <span class="number">2</span>)</div><div class="line">&#123;</div><div class="line">当条件 <span class="number">2</span> 为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">当条件 <span class="number">1</span> 和 条件 <span class="number">2</span> 都不为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>switch语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(n)</div><div class="line">&#123; <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">执行代码块 <span class="number">1</span></div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">执行代码块 <span class="number">2</span></div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">default</span>:</div><div class="line">n 与 <span class="keyword">case</span> <span class="number">1</span> 和 <span class="keyword">case</span> <span class="number">2</span> 不同时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><blockquote>
-<p>前面介绍的if语句和switch语句，都属于条件判断语句。即在条件为真的情况下每行脚本只有一次执行的机会。对于实际情况中，需要根据条件或计数器来重复执行多行程序代码的能力，利用循环语句来实现。<br>在JavaScript中有两种主要类型的循环语句，<code>for循</code><br>环和<code>while循环</code></p>
-</blockquote>
-<ul>
-<li><p>for 循环</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (语句 <span class="number">1</span>; 语句 <span class="number">2</span>; 语句 <span class="number">3</span>)</div><div class="line">&#123;</div><div class="line">被执行的代码块</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>语句 1 在循环（代码块）开始前执行</li>
-<li>语句 2 定义运行循环（代码块）的条件</li>
-<li>语句 3 在循环（代码块）已被执行之后执行</li>
-</ul>
-</li>
-<li><p>While 语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (条件)</div><div class="line">&#123;</div><div class="line">需要执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Do…While语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span></div><div class="line">&#123;</div><div class="line">需要执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">while</span> (条件);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>在循环语句中，只有当循环条件表达式值为false时，循环语句才能结束，为了给for和while循环加入更多的使用程序，JavaScript包含有<code>break</code>和<code>continue语句</code>。这两个语句可用于改变循环的流程。</p>
-<ul>
-<li>Break语句 中断循环</li>
-<li>Continue语句 开始下一次循环</li>
-</ul>
-</blockquote>
 ]]></content>
     
     <summary type="html">
