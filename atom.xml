@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-25T14:16:51.658Z</updated>
+  <updated>2017-04-27T00:55:09.953Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,16 +16,117 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1510_shijain__shijianmaopao</title>
+    <title>Window 对象</title>
     <link href="http://yoursite.com/2017/04/25/1510-shijain-shijianmaopao/"/>
     <id>http://yoursite.com/2017/04/25/1510-shijain-shijianmaopao/</id>
     <published>2017-04-25T14:16:51.000Z</published>
-    <updated>2017-04-25T14:16:51.658Z</updated>
+    <updated>2017-04-27T00:55:09.953Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h1><p>##概念：</p>
+<blockquote>
+<p>Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><ul>
+<li>innerHeight 返回窗口的文档显示区的高度</li>
+<li>innerWidth 返回窗口的文档显示区的宽度</li>
+<li>outerHeight 返回窗口的外部高度 包括滚动条、地址栏、收藏栏等</li>
+<li>outerwidth 返回窗口的外部宽度 </li>
+<li>length 设置或返回窗口中的框架数量</li>
+<li>name 设置或返回窗口的名称。<ul>
+<li>window.open() 打开的新网页，第二个参数就是此网页的name。</li>
+<li>iframe里面，name属性就是window的name</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
+<li>close() 关闭浏览器窗口</li>
+<li>alert() 显示带有一段消息和一个确认按钮的警告框</li>
+<li>confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框</li>
+<li>prompt()显示可提示用户输入的对话框</li>
+<li>open() 打开一个新的浏览器窗口或查找一个已命名的窗口</li>
+<li>resizeBy() 按照指定的像素调整窗口的大小</li>
+<li>resizeTo() 把窗口的大小调整到指定的宽度和高度</li>
+<li>scrollBy() 按照指定的像素值来滚动内容</li>
+<li>scrollTo() 把内容滚动到指定的坐标</li>
+</ul>
+<h1 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h1><blockquote>
+<p>navigator对象通常用于检测浏览器不操作系统的版本</p>
+<p>##属性：</p>
+<ul>
+<li>appCodeName返回浏览器的代码名</li>
+<li>appVersion返回浏览器的次级版本</li>
+<li>appName返回浏览器的名称</li>
+<li>language返回当前浏览器的语言</li>
+<li>platform 返回运行浏览器的操作系统平台</li>
+</ul>
+</blockquote>
+<h1 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a>document对象</h1><blockquote>
+<p>document 对象是 Window 对象的一部分，包含整个htmlDOM,可通过 window.document 属性对其进行访问,也可以用document直接访问</p>
+</blockquote>
+<p>##属性:</p>
+<ul>
+<li>document.cookie 获取或设置cookie</li>
+<li>document.title 获取或设置title</li>
+<li>document.URL 获取或设置URL</li>
+</ul>
+<h2 id="window下的其他对象"><a href="#window下的其他对象" class="headerlink" title="window下的其他对象"></a>window下的其他对象</h2><blockquote>
+<p>screen 对象包含有关客户端显示屏幕的信息</p>
+</blockquote>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>height 返回显示屏幕的高度； width返回显示器屏幕的宽度</li>
+<li>availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</li>
+<li>availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</li>
+<li>colorDepth 返回目标设备或缓冲器上的调色板的比特深度</li>
+<li>pixelDepth 返回显示屏幕的颜色分辨率（比特每像素）</li>
+</ul>
+<h2 id="Body对象"><a href="#Body对象" class="headerlink" title="Body对象"></a>Body对象</h2><h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>clientWidth网页可见区域宽</li>
+<li>clientHeight网页可见区域高</li>
+<li>scrollWidth网页正文全文宽</li>
+<li>scrollHeight网页正文全文高</li>
+<li>scrollTop网页被卷去的高</li>
+<li>scrollLeft网页被卷去的左</li>
+</ul>
+<p>##Location 对象</p>
+<blockquote>
+<p>Location 对象对象包含有关当前 URL 的信息</p>
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>hash设置或返回从井号 (#) 开始的 URL（锚）</li>
+<li>host设置或返回主机名和当前 URL 的端口号</li>
+<li>hostname设置或返回当前 URL 的主机名</li>
+<li>href设置或返回完整的 URL</li>
+<li>pathname设置或返回当前 URL 的路径部分</li>
+<li>port设置或返回当前 URL 的端口号</li>
+<li>protocol设置或返回当前 URL 的协议</li>
+<li>search设置或返回从问号 (?) 开始的 URL（查询部分）</li>
+</ul>
+</blockquote>
+<p>###方法</p>
+<ul>
+<li>assign() 加载新的文档</li>
+<li>reload() 重新加载当前文档</li>
+<li>replace() 用新的文档替换当前文档</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;Window-对象&quot;&gt;&lt;a href=&quot;#Window-对象&quot; class=&quot;headerlink&quot; title=&quot;Window 对象&quot;&gt;&lt;/a&gt;Window 对象&lt;/h1&gt;&lt;p&gt;##概念：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Window 对象表示浏览器中打
+    
     </summary>
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -34,7 +135,7 @@
     <link href="http://yoursite.com/2017/04/22/DOMorEVENT/"/>
     <id>http://yoursite.com/2017/04/22/DOMorEVENT/</id>
     <published>2017-04-21T16:33:08.000Z</published>
-    <updated>2017-04-25T14:35:13.184Z</updated>
+    <updated>2017-04-26T07:04:26.971Z</updated>
     
     <content type="html"><![CDATA[<h1 id="DOM节点查找"><a href="#DOM节点查找" class="headerlink" title="DOM节点查找"></a>DOM节点查找</h1><table>
 <thead>
@@ -136,6 +237,7 @@
 <blockquote>
 <p>IE中使用cancelBubble=true，Firefox中使用stopPropation()</p>
 </blockquote>
+<p>  <img src="/images/20131028160201571.jpg" alt="冒泡事件"></p>
 ]]></content>
     
     <summary type="html">
@@ -627,44 +729,6 @@
   </entry>
   
   <entry>
-    <title>HTML5与CSS3权威指南(完整版)</title>
-    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
-    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
-    <published>2017-04-19T07:31:31.000Z</published>
-    <updated>2017-04-19T08:13:33.737Z</updated>
-    
-    <content type="html"><![CDATA[
-
-	<div class="row">
-    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
-<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;
-
-
-
-&lt;p&gt;HTML 5与CS
-    
-    </summary>
-    
-      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>HTML 5+CSS3从入门到精通</title>
     <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
     <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
@@ -694,6 +758,44 @@
 
 
 &lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
+    
+    </summary>
+    
+      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5与CSS3权威指南(完整版)</title>
+    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
+    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
+    <published>2017-04-19T07:31:31.000Z</published>
+    <updated>2017-04-19T08:13:33.737Z</updated>
+    
+    <content type="html"><![CDATA[
+
+	<div class="row">
+    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
+<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;p&gt;HTML 5与CS
     
     </summary>
     

@@ -81,7 +81,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="小鸟依家,web前端,前端开发师,程序员" />
+  <meta name="keywords" content="前端基础,动态网页编程,JavaScript," />
 
 
 
@@ -99,17 +99,17 @@
 
 
 
-<meta name="description" content="今天你足够努力了吗!?">
-<meta name="keywords">
+<meta name="description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
+<meta name="keywords" content="前端基础,动态网页编程,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1510_shijain__shijianmaopao">
+<meta property="og:title" content="Window 对象">
 <meta property="og:url" content="http://yoursite.com/2017/04/25/1510-shijain-shijianmaopao/index.html">
 <meta property="og:site_name" content="小鸟依家">
-<meta property="og:description" content="今天你足够努力了吗!?">
-<meta property="og:updated_time" content="2017-04-25T14:16:51.658Z">
+<meta property="og:description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
+<meta property="og:updated_time" content="2017-04-27T00:55:09.953Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1510_shijain__shijianmaopao">
-<meta name="twitter:description" content="今天你足够努力了吗!?">
+<meta name="twitter:title" content="Window 对象">
+<meta name="twitter:description" content="Window 对象##概念：  Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象 属性 innerHeight 返回窗口的文档显示区的高度 innerWidth 返回窗口的文档显示区的宽度 outerHeight 返回窗口的外部高度 包括滚动条、地">
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <title> 1510_shijain__shijianmaopao | 小鸟依家 </title>
+  <title> Window 对象 | 小鸟依家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -367,7 +367,7 @@
             
             
               
-                1510_shijain__shijianmaopao
+                Window 对象
               
             
           </h1>
@@ -393,6 +393,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/动态网页编程/" itemprop="url" rel="index">
+                    <span itemprop="name">动态网页编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -410,7 +443,7 @@
 
           
           
-             <span id="/2017/04/25/1510-shijain-shijianmaopao/" class="leancloud_visitors" data-flag-title="1510_shijain__shijianmaopao">
+             <span id="/2017/04/25/1510-shijain-shijianmaopao/" class="leancloud_visitors" data-flag-title="Window 对象">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -439,7 +472,92 @@
       
 
       
-        
+        <h1 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h1><p>##概念：</p>
+<blockquote>
+<p>Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><ul>
+<li>innerHeight 返回窗口的文档显示区的高度</li>
+<li>innerWidth 返回窗口的文档显示区的宽度</li>
+<li>outerHeight 返回窗口的外部高度 包括滚动条、地址栏、收藏栏等</li>
+<li>outerwidth 返回窗口的外部宽度 </li>
+<li>length 设置或返回窗口中的框架数量</li>
+<li>name 设置或返回窗口的名称。<ul>
+<li>window.open() 打开的新网页，第二个参数就是此网页的name。</li>
+<li>iframe里面，name属性就是window的name</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
+<li>close() 关闭浏览器窗口</li>
+<li>alert() 显示带有一段消息和一个确认按钮的警告框</li>
+<li>confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框</li>
+<li>prompt()显示可提示用户输入的对话框</li>
+<li>open() 打开一个新的浏览器窗口或查找一个已命名的窗口</li>
+<li>resizeBy() 按照指定的像素调整窗口的大小</li>
+<li>resizeTo() 把窗口的大小调整到指定的宽度和高度</li>
+<li>scrollBy() 按照指定的像素值来滚动内容</li>
+<li>scrollTo() 把内容滚动到指定的坐标</li>
+</ul>
+<h1 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h1><blockquote>
+<p>navigator对象通常用于检测浏览器不操作系统的版本</p>
+<p>##属性：</p>
+<ul>
+<li>appCodeName返回浏览器的代码名</li>
+<li>appVersion返回浏览器的次级版本</li>
+<li>appName返回浏览器的名称</li>
+<li>language返回当前浏览器的语言</li>
+<li>platform 返回运行浏览器的操作系统平台</li>
+</ul>
+</blockquote>
+<h1 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a>document对象</h1><blockquote>
+<p>document 对象是 Window 对象的一部分，包含整个htmlDOM,可通过 window.document 属性对其进行访问,也可以用document直接访问</p>
+</blockquote>
+<p>##属性:</p>
+<ul>
+<li>document.cookie 获取或设置cookie</li>
+<li>document.title 获取或设置title</li>
+<li>document.URL 获取或设置URL</li>
+</ul>
+<h2 id="window下的其他对象"><a href="#window下的其他对象" class="headerlink" title="window下的其他对象"></a>window下的其他对象</h2><blockquote>
+<p>screen 对象包含有关客户端显示屏幕的信息</p>
+</blockquote>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>height 返回显示屏幕的高度； width返回显示器屏幕的宽度</li>
+<li>availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</li>
+<li>availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</li>
+<li>colorDepth 返回目标设备或缓冲器上的调色板的比特深度</li>
+<li>pixelDepth 返回显示屏幕的颜色分辨率（比特每像素）</li>
+</ul>
+<h2 id="Body对象"><a href="#Body对象" class="headerlink" title="Body对象"></a>Body对象</h2><h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>clientWidth网页可见区域宽</li>
+<li>clientHeight网页可见区域高</li>
+<li>scrollWidth网页正文全文宽</li>
+<li>scrollHeight网页正文全文高</li>
+<li>scrollTop网页被卷去的高</li>
+<li>scrollLeft网页被卷去的左</li>
+</ul>
+<p>##Location 对象</p>
+<blockquote>
+<p>Location 对象对象包含有关当前 URL 的信息</p>
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>hash设置或返回从井号 (#) 开始的 URL（锚）</li>
+<li>host设置或返回主机名和当前 URL 的端口号</li>
+<li>hostname设置或返回当前 URL 的主机名</li>
+<li>href设置或返回完整的 URL</li>
+<li>pathname设置或返回当前 URL 的路径部分</li>
+<li>port设置或返回当前 URL 的端口号</li>
+<li>protocol设置或返回当前 URL 的协议</li>
+<li>search设置或返回从问号 (?) 开始的 URL（查询部分）</li>
+</ul>
+</blockquote>
+<p>###方法</p>
+<ul>
+<li>assign() 加载新的文档</li>
+<li>reload() 重新加载当前文档</li>
+<li>replace() 用新的文档替换当前文档</li>
+</ul>
+
       
     </div>
 
@@ -486,6 +604,16 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端基础/" rel="tag"># 前端基础</a>
+          
+            <a href="/tags/动态网页编程/" rel="tag"># 动态网页编程</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
       
 
       
@@ -559,8 +687,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/a.jpg"
@@ -629,6 +766,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">1.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">1.2.</span> <span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#navigator对象"><span class="nav-number">2.</span> <span class="nav-text">navigator对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#document对象"><span class="nav-number">3.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#window下的其他对象"><span class="nav-number">3.1.</span> <span class="nav-text">window下的其他对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Body对象"><span class="nav-number">3.2.</span> <span class="nav-text">Body对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-2"><span class="nav-number">3.2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-3"><span class="nav-number">3.2.2.</span> <span class="nav-text">属性</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
