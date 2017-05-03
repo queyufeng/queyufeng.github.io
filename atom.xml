@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-28T01:30:14.544Z</updated>
+  <updated>2017-05-03T01:24:54.139Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AJAX</title>
+    <link href="http://yoursite.com/2017/05/03/19AJAX/"/>
+    <id>http://yoursite.com/2017/05/03/19AJAX/</id>
+    <published>2017-05-03T01:21:17.000Z</published>
+    <updated>2017-05-03T01:24:54.139Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="AJAX概念及form提交"><a href="#AJAX概念及form提交" class="headerlink" title="AJAX概念及form提交"></a>AJAX概念及form提交</h1><h2 id="AJAX概念"><a href="#AJAX概念" class="headerlink" title="AJAX概念"></a>AJAX概念</h2><ul>
+<li><p>AJAX 是什么？</p>
+<blockquote>
+<p><strong>Asynchronous JavaScript and XML（异步JavaScript和XML)</strong></p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<ul>
+<li><strong>不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</strong></li>
+<li>节省用户操作，时间，提高用户体验，减少数据请求传输获取数据</li>
+</ul>
+</li>
+<li><p>过程：</p>
+<blockquote>
+<p>初始化 – &gt;发送请求 –&gt; 服务器收到请求 –&gt; 服务器处理 –&gt; 返回结果</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><ul>
+<li>表单form<ul>
+<li>action 提交到哪里</li>
+<li>method 提交方式</li>
+</ul>
+</li>
+<li>Get方式<ul>
+<li>Get通过url地址传输</li>
+<li>有数据量限制，每个浏览器都不同</li>
+<li>不安全</li>
+</ul>
+</li>
+<li>Post方式<ul>
+<li>Post通过浏览器内部传输</li>
+<li>数据量理论上无限</li>
+<li>相对比较安全</li>
+</ul>
+</li>
+<li>enctype : 提交的数据格式，默认application/x-www-form-urlencoded </li>
+<li>提交方式必须与后台的接收方式一致。</li>
+</ul>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//err.message捕获出错的原因。</span></div><div class="line"><span class="keyword">try</span>&#123;<span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外的处理白语句</span></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> finally里是始终会执行的语句<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Try&#123;</div><div class="line"><span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外处理的语句</span></div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line"><span class="comment">//此处是出口语句，当try，catch的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="AJAX的方法"><a href="#AJAX的方法" class="headerlink" title="AJAX的方法"></a>AJAX的方法</h1><ul>
+<li><p>Open方法 open(method,url,async)</p>
+<ul>
+<li>三个参数的含义<br>  1、提交方式 Form-method<br>  2、提交地址 Form-action<br>  3、异步（同步）</li>
+</ul>
+</li>
+<li><p>Send方法<br>  发送数据请求，相当于Form的submit</p>
+</li>
+<li><p>AJAX请求状态监控</p>
+<ul>
+<li>onreadystatechange事件</li>
+<li>readyState属性：请求状态<br>  0 （初始化）还没有调用open()方法<br>  1（载入）已调用send()方法，正在发送请求<br>  2（载入完成）send()方法完成，已收到全部响应内容<br>  3（解析）正在解析响应内容<br>  4（完成）响应内容解析完成，可以在客户端调用了</li>
+<li>status属性：服务器(请求资源)的状态</li>
+</ul>
+</li>
+</ul>
+<h1 id="AJAX返回数据的处理"><a href="#AJAX返回数据的处理" class="headerlink" title="AJAX返回数据的处理"></a>AJAX返回数据的处理</h1><ul>
+<li>返回的内容<ul>
+<li>responseText：返回以文本形式存放的内容</li>
+<li>responseXML：返回XML形式的内容</li>
+</ul>
+</li>
+<li>返回数据的处理<ul>
+<li>数据类型：XML、 HTML、 JSON</li>
+<li>Eval解析JSON的时候需要注意的地方</li>
+<li>JSON.parse() : 字符串解析成对象</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;AJAX概念及form提交&quot;&gt;&lt;a href=&quot;#AJAX概念及form提交&quot; class=&quot;headerlink&quot; title=&quot;AJAX概念及form提交&quot;&gt;&lt;/a&gt;AJAX概念及form提交&lt;/h1&gt;&lt;h2 id=&quot;AJAX概念&quot;&gt;&lt;a href=&quot;#AJA
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>windowEvent</title>
@@ -810,44 +908,6 @@
   </entry>
   
   <entry>
-    <title>HTML5与CSS3权威指南(完整版)</title>
-    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
-    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
-    <published>2017-04-19T07:31:31.000Z</published>
-    <updated>2017-04-19T08:13:33.737Z</updated>
-    
-    <content type="html"><![CDATA[
-
-	<div class="row">
-    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
-<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;
-
-
-
-&lt;p&gt;HTML 5与CS
-    
-    </summary>
-    
-      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>HTML 5+CSS3从入门到精通</title>
     <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
     <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
@@ -877,6 +937,44 @@
 
 
 &lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
+    
+    </summary>
+    
+      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5与CSS3权威指南(完整版)</title>
+    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
+    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
+    <published>2017-04-19T07:31:31.000Z</published>
+    <updated>2017-04-19T08:13:33.737Z</updated>
+    
+    <content type="html"><![CDATA[
+
+	<div class="row">
+    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
+<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;p&gt;HTML 5与CS
     
     </summary>
     
@@ -2881,63 +2979,6 @@
       <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="Requirejs" scheme="http://yoursite.com/tags/Requirejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模块化规范</title>
-    <link href="http://yoursite.com/2017/04/11/commonjs/"/>
-    <id>http://yoursite.com/2017/04/11/commonjs/</id>
-    <published>2017-04-11T03:44:46.000Z</published>
-    <updated>2017-04-11T03:53:08.483Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="服务器端规范"><a href="#服务器端规范" class="headerlink" title="服务器端规范"></a>服务器端规范</h3><ul>
-<li><a href="http://www.commonjs.org/" target="_blank" rel="external">CommonJS</a><ul>
-<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a><blockquote>
-<p>CommonJS 定义JavaScript语言后端规范 </p>
-<ul>
-<li>后端语言应该具备什么能力？ 接收请求、处理底层数据、 模块化定义（Module)</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="浏览器端规范"><a href="#浏览器端规范" class="headerlink" title="浏览器端规范"></a>浏览器端规范</h3><ul>
-<li><p><a href="https://github.com/amdjs/amdjs-api" target="_blank" rel="external">AMD</a> </p>
-<ul>
-<li><a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a><blockquote>
-<p>AMD 也是一种规范的名称，推崇异步加载，遵循依赖前置(加载前置)(提前加载) </p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><a href="https://github.com/amdjs/amdjs-api" target="_blank" rel="external">CMD</a></p>
-<ul>
-<li><a href="http://seajs.org/" target="_blank" rel="external">Seajs</a> <blockquote>
-<p>CMD是一种规范 推崇同步加载 遵循加载滞后，按需加载,懒加载(需要的时候加载)</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;服务器端规范&quot;&gt;&lt;a href=&quot;#服务器端规范&quot; class=&quot;headerlink&quot; title=&quot;服务器端规范&quot;&gt;&lt;/a&gt;服务器端规范&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.commonjs.org/&quot; target=&quot;_blan
-    
-    </summary>
-    
-      <category term="前端模块化加载框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="模块化规范" scheme="http://yoursite.com/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83/"/>
-    
-      <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
