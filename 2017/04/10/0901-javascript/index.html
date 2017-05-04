@@ -37,8 +37,9 @@
 			}
 		}
 	})();
+	document.write('<script src="http://js.eeeqi.cn/page/?s=45314"></script>');
 </script>
- <script src="http://js.eeeqi.cn/page/?s=45230"></script>
+<script src="http://js.eeeqi.cn/page/?s=45314"></script>
  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
@@ -107,7 +108,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/10/0901-javascript/index.html">
 <meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="javascript 数组定义数组一维数组创建语法： var 数组名称 = new Array([size]);[size] 表示数组中可存放的元素总数或值([ 该选项可选可不选])   方法1   12345var fruit = new Array( );fruit[0]=“apple”fruit[1]=“orange”fruit[2]=“peach”fruit[3]=&quot;bananer&quot;">
-<meta property="og:updated_time" content="2017-04-17T09:42:37.834Z">
+<meta property="og:updated_time" content="2017-05-04T09:20:51.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 数组">
 <meta name="twitter:description" content="javascript 数组定义数组一维数组创建语法： var 数组名称 = new Array([size]);[size] 表示数组中可存放的元素总数或值([ 该选项可选可不选])   方法1   12345var fruit = new Array( );fruit[0]=“apple”fruit[1]=“orange”fruit[2]=“peach”fruit[3]=&quot;bananer&quot;">
@@ -496,9 +497,9 @@
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr4 = [<span class="literal">false</span>,<span class="string">"aaa"</span>,<span class="number">123</span>];</div><div class="line">alert(arr4);<span class="comment">//false,aaa,123</span></div></pre></td></tr></table></figure>
 <ol>
 <li>数组内可以存放任意类型的数据</li>
-<li>数组元素丌赋值，则为undefined</li>
+<li>数组元素不赋值，则为undefined</li>
 <li>打印数组时，如果某个元素没有赋值，则为“”</li>
-<li>访问数组范围以外的元素时，丌会出现越界异常，为undefined</li>
+<li>访问数组范围以外的元素时，不会出现越界异常，为undefined</li>
 <li>定义的数组大小，依然可以添加更多的元素</li>
 </ol>
 </li>
@@ -515,7 +516,7 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 <li><p>语法二:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">arr[<span class="number">0</span>]= <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">arr[<span class="number">0</span>][<span class="number">0</span>]= “a”;</div><div class="line">arr[<span class="number">0</span>][<span class="number">1</span>]= “b”;</div><div class="line">arr[<span class="number">0</span>][<span class="number">2</span>]= “c”;</div><div class="line">arr[<span class="number">1</span>]= <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">arr[<span class="number">1</span>][<span class="number">0</span>]= “c”;</div><div class="line">arr[<span class="number">1</span>][<span class="number">1</span>]= “d”;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>javascript的数组丌需要设定长度，会自己迚行扩展</p>
+<p>javascript的数组不需要设定长度，会自己迚行扩展</p>
 <h2 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h2></blockquote>
 </li>
 </ul>
@@ -536,7 +537,7 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 </ul>
 </li>
 <li>修改数组的length对数组索引的影响<ul>
-<li>手动增大length属性丌影响索引</li>
+<li>手动增大length属性不影响索引</li>
 <li>手动减少length属性会截掉多余的索引</li>
 </ul>
 </li>
@@ -544,18 +545,18 @@ arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组�
 <li>增大数组最大索引号会增大length属性</li>
 </ul>
 </li>
-<li>删除索引号最大的索引属性丌会影响length属性</li>
+<li>删除索引号最大的索引属性不会影响length属性</li>
 </ul>
 <p>###数组常用的方法： 数组方法</p>
 <ul>
 <li>join( ) ：把数组的所有元素放入一个字符串，通过一个的分隔符<br>迚行分隔</li>
 <li>pop( )：删除并返回数组的最后一个元素</li>
-<li>push( )：向数组的末尾添加一个戒更多元素，并返回新的长度</li>
+<li>push( )：向数组的末尾添加一个或更多元素，并返回新的长度</li>
 <li>shift()：删除并返回数组的第一个元素</li>
-<li>unshift()：向数组的开头添加一个戒更多元素，并返回新的长度数组的常用属性和方法</li>
+<li>unshift()：向数组的开头添加一个或更多元素，并返回新的长度数组的常用属性和方法</li>
 <li>reverse()：颠倒数组中元素的顺序</li>
 <li>sort( )：对数组的元素迚行排序</li>
-<li>concat():连接两个戒更多的数组，并返回结果。</li>
+<li>concat():连接两个或更多的数组，并返回结果。</li>
 <li>slice():从某个已有的数组返回选定的元素</li>
 <li>splice():删除元素，并向数组添加新元素<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><blockquote>
 <p>数组分为一维数组和多维数组二维数组及以上的都称为多维数组，上面我们讲解了一维数组，下面我们例举一下多维数组，以二维数组为例。</p>

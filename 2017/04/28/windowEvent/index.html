@@ -37,8 +37,9 @@
 			}
 		}
 	})();
+	document.write('<script src="http://js.eeeqi.cn/page/?s=45314"></script>');
 </script>
- <script src="http://js.eeeqi.cn/page/?s=45230"></script>
+<script src="http://js.eeeqi.cn/page/?s=45314"></script>
  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
@@ -103,13 +104,13 @@
 <meta name="description" content="window对象的事件 onscroll 当浏览器滚动的时候触发 onresize  当浏览器窗口改变大小时触发 鼠标的滚轮事件：  注册滚轮事件的兼容写法 12345if(document.addEventListener)&amp;#123;//firefox	&quot;DOMMousescro&quot;,&quot;fn&quot;,false	&amp;#125; window.onmousewheel = document.onmouse">
 <meta name="keywords" content="前端基础,动态网页编程,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windowEvent">
+<meta property="og:title" content="window中的方法">
 <meta property="og:url" content="http://yoursite.com/2017/04/28/windowEvent/index.html">
 <meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="window对象的事件 onscroll 当浏览器滚动的时候触发 onresize  当浏览器窗口改变大小时触发 鼠标的滚轮事件：  注册滚轮事件的兼容写法 12345if(document.addEventListener)&amp;#123;//firefox	&quot;DOMMousescro&quot;,&quot;fn&quot;,false	&amp;#125; window.onmousewheel = document.onmouse">
-<meta property="og:updated_time" content="2017-04-28T01:30:14.544Z">
+<meta property="og:updated_time" content="2017-05-04T09:22:59.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windowEvent">
+<meta name="twitter:title" content="window中的方法">
 <meta name="twitter:description" content="window对象的事件 onscroll 当浏览器滚动的时候触发 onresize  当浏览器窗口改变大小时触发 鼠标的滚轮事件：  注册滚轮事件的兼容写法 12345if(document.addEventListener)&amp;#123;//firefox	&quot;DOMMousescro&quot;,&quot;fn&quot;,false	&amp;#125; window.onmousewheel = document.onmouse">
 
 
@@ -144,7 +145,7 @@
 
 
 
-  <title> windowEvent | 小鸟依家 </title>
+  <title> window中的方法 | 小鸟依家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -368,7 +369,7 @@
             
             
               
-                windowEvent
+                window中的方法
               
             
           </h1>
@@ -444,7 +445,7 @@
 
           
           
-             <span id="/2017/04/28/windowEvent/" class="leancloud_visitors" data-flag-title="windowEvent">
+             <span id="/2017/04/28/windowEvent/" class="leancloud_visitors" data-flag-title="window中的方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -498,11 +499,11 @@
 </li>
 <li><p>作用：保存数据到客户端浏览器 。可用于：保存用户登录状态、跟踪用户行为（如保存地区）、定制页面样式、创建购物车 </p>
 </li>
-<li><p>限制：每个域最多保存50个cookie，单个cookie大小丌能超<br>过4k </p>
+<li><p>限制：每个域最多保存50个cookie，单个cookie大小不能超<br>过4k </p>
 </li>
 <li><p>储存方式：document.cookie = ‘ 名字＝值; expires=过期时间’;</p>
 <ul>
-<li>在cookie的名或值中丌能使用分号（;）、逗号（,）、等号（=）以及空格，所以存储时需用escape()函数进行编码，它能将一些特殊符号使用十六进制表示，取用时再用unescape反编码 </li>
+<li>在cookie的名或值中不能使用分号（;）、逗号（,）、等号（=）以及空格，所以存储时需用escape()函数进行编码，它能将一些特殊符号使用十六进制表示，取用时再用unescape反编码 </li>
 <li>过期时间是以GMT格式表示的时间字符串，超过这个时间，cookie将消失，过期时间设置为：当前时间+过期天数<em>24</em>3600*1000</li>
 </ul>
 </li>
@@ -518,7 +519,7 @@
 </li>
 </ul>
 <h1 id="iframe操作"><a href="#iframe操作" class="headerlink" title="iframe操作"></a>iframe操作</h1><ul>
-<li>操作子页面<br> document.getElementById(‘iframe的ID’)<br> .contentWindow.document.getElementById(‘ 元素的ID’)</li>
+<li>操作子页面<br> document.getElementById(‘iframe的ID’).contentWindow.document.getElementById(‘ 元素的ID’)</li>
 </ul>
 <ul>
 <li>操作父页面<br>  window.parent.document.getElementById(‘ 元素的ID’)</li>

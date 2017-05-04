@@ -37,8 +37,9 @@
 			}
 		}
 	})();
+	document.write('<script src="http://js.eeeqi.cn/page/?s=45314"></script>');
 </script>
- <script src="http://js.eeeqi.cn/page/?s=45230"></script>
+<script src="http://js.eeeqi.cn/page/?s=45314"></script>
  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
@@ -103,13 +104,13 @@
 <meta name="description" content="js代码性能优化 JS提供了三种循环：for(;;)、 while()、 for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、 while()循环的性能基本持平。 如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度 减少全局变量使用，局部变量的访问速度要比全局变量的访问速度更快，因为">
 <meta name="keywords" content="前端基础,动态网页编程,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsyouhua">
+<meta property="og:title" content="js代码性能优化">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/jsyouhua/index.html">
 <meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="js代码性能优化 JS提供了三种循环：for(;;)、 while()、 for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、 while()循环的性能基本持平。 如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度 减少全局变量使用，局部变量的访问速度要比全局变量的访问速度更快，因为">
-<meta property="og:updated_time" content="2017-05-04T01:45:38.400Z">
+<meta property="og:updated_time" content="2017-05-04T09:20:50.912Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jsyouhua">
+<meta name="twitter:title" content="js代码性能优化">
 <meta name="twitter:description" content="js代码性能优化 JS提供了三种循环：for(;;)、 while()、 for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、 while()循环的性能基本持平。 如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度 减少全局变量使用，局部变量的访问速度要比全局变量的访问速度更快，因为">
 
 
@@ -144,7 +145,7 @@
 
 
 
-  <title> jsyouhua | 小鸟依家 </title>
+  <title> js代码性能优化 | 小鸟依家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -368,7 +369,7 @@
             
             
               
-                jsyouhua
+                js代码性能优化
               
             
           </h1>
@@ -444,7 +445,7 @@
 
           
           
-             <span id="/2017/05/04/jsyouhua/" class="leancloud_visitors" data-flag-title="jsyouhua">
+             <span id="/2017/05/04/jsyouhua/" class="leancloud_visitors" data-flag-title="js代码性能优化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -480,9 +481,9 @@
 <li>尽量少使用eval，每次使用eval需要消耗大量时间</li>
 <li>尽量避免对象的嵌套查询，比如访问这样的对象obj1.obj2.obj3.obj4。应先将obj4以局部变量保存，然后再访问它包含的内容。</li>
 <li>使运算符时，尽量使用+＝，－＝、 *＝、 \=等运算符号，而不是直接进行赋值运算</li>
-<li>当需要将浮点数转换成整型时，应该使用Math.floor()或者Math.round()。而丌是使用parseInt(),该方法用于将字符串转换成数字。而且Math是内部对象，所以Math.floor()其实并没有多少查询方法和调用时间，速度是最快的</li>
+<li>当需要将浮点数转换成整型时，应该使用Math.floor()或者Math.round()。而或是使用parseInt(),该方法用于将字符串转换成数字。而且Math是内部对象，所以Math.floor()其实并没有多少查询方法和调用时间，速度是最快的</li>
 <li>当需要将数字转换成字符时，采用如下方式：”” + 1。从性能上来看，将数字转换成字符时，有如下公式：(“” +) &gt;String() &gt; .toString() &gt; new String()。 String()属于内部函数，所以速度很快。而.toString()要查询原型中的函数，所以速度逊色一些，new String()需要重新创建一个字符串对象，速度最慢 </li>
-<li>尽量作用JSON格式来创建对象，而丌是var obj=new Object()方法。因为前者是直接复制，而后者需要调用构造器，因而前者的性能更好。</li>
+<li>尽量作用JSON格式来创建对象，而或是var obj=new Object()方法。因为前者是直接复制，而后者需要调用构造器，因而前者的性能更好。</li>
 <li>对字符串进行循环操作，例如替换、查找，就使用正则表达式。因为JS的循环速度比较慢，而正则表达式的操作是用C写成的API，性能比较好</li>
 <li>当需要使用数组时，也尽量使用JSON格式的语法，即直接使用如下语法定义数组：[parrm,param,param…],而不是采用 new Array(parrm,param,param…)这种语法。因<br>为使用JSON格式的语法是引擎直接解释的。而后者则需要调用Array的构造器</li>
 </ol>

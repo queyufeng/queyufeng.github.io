@@ -101,15 +101,16 @@
 
 
 
-<meta name="description" content="今天你足够努力了吗!?">
+<meta name="description" content="无标题文档  *{margin:0; padding:0;} .box1{width:100px; height:100px; background:#00f;} .box2{width:200px; height:20px; background:00f;  background:#060; color:#fff;} .box2 a{color:#000; text-decoration">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小鸟依家">
-<meta property="og:url" content="http://yoursite.com/archives/2017/04/page/2/index.html">
+<meta property="og:url" content="http://yoursite.com/anli/event.html">
 <meta property="og:site_name" content="小鸟依家">
-<meta property="og:description" content="今天你足够努力了吗!?">
+<meta property="og:description" content="无标题文档  *{margin:0; padding:0;} .box1{width:100px; height:100px; background:#00f;} .box2{width:200px; height:20px; background:00f;  background:#060; color:#fff;} .box2 a{color:#000; text-decoration">
+<meta property="og:updated_time" content="2017-03-10T07:07:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小鸟依家">
-<meta name="twitter:description" content="今天你足够努力了吗!?">
+<meta name="twitter:description" content="无标题文档  *{margin:0; padding:0;} .box1{width:100px; height:100px; background:#00f;} .box2{width:200px; height:20px; background:00f;  background:#060; color:#fff;} .box2 a{color:#000; text-decoration">
 
 
 
@@ -137,13 +138,19 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/04/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/anli/event.html"/>
 
 
 
 
 
-  <title> 归档 | 小鸟依家 </title>
+  <title>
+  
+
+  
+     | 小鸟依家
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -336,402 +343,118 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+  <header class="post-header">
 
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 目前共计 33 篇日志。 继续努力。
-    </span>
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
 
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/14/1001-function/" itemprop="url">
-              
-                <span itemprop="name">JS函数,对象/类,定时器</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-14T16:51:14+08:00"
-              content="2017-04-14" >
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
+    
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0; padding:0;}
+.box1{width:100px; height:100px; background:#00f;}
+.box2{width:200px; height:20px; background:00f;  background:#060; color:#fff;}
+.box2 a{color:#000; text-decoration:none; color:#fff;}
+.box2 ul{display:none;  background:#060;}
+.box2 ul li{list-style:none;  }
 
 
+.top{width:100px; height:100px; background:#666; position:absolute; top:570px; right:20px; font-size:36px;  text-align:center; color:#fff; cursor:pointer;}
+</style>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//单击事件
+	$("#btn1").click(function(){
+		$(".box1").animate({"width":"200px"},500);
+	})
+	
+	//获得/失去焦点事件
+	 $("input").focus(function(){
+		$("input").css("background-color","#FFFFCC");
+	  });
+	  $("input").blur(function(){
+		$("input").css("background-color","#D6D6FF");
+	  });
+	 
+	 //鼠标移入/移出事件
+	$(".box2").mouseover(function(){
+		$("ul").stop().fadeIn("fast");	
+	}).mouseout(function(){
+		$("ul").fadeOut("fast");	
+		})
+	
+	
+	/*top*/
+	var obj = $('.top');
+	var offset = obj.offset();
+	var topOffset = offset.top;
+	$(window).scroll(function() {
+	var scrollTop = $(window).scrollTop()+400;
+		if (scrollTop >= topOffset){
+			obj.animate({"top":scrollTop},10);
+		}
+		if (scrollTop < topOffset){
+			obj.css({"top": "570px"  
+			});
+		}
+	});
+	
+	$(".top").click(function(){
+		$("html,body").animate({scrollTop:"0px"},500)	
+	})
+	
+})
+</script>
+</head>
+
+<body>
+<h2>单击事件click</h2>
+<br>
+<button id="btn1">click</button>
+<div class="box1"></div>
+<br>
+<br>
+
+<h2>获得/失去焦点事件</h2>
+<br>
+姓名: <input type="text">
+<p>请在上面的输入域中点击，使其获得焦点，然后在输入域外面点击，使其失去焦点。</p>
+<br>
+<br>
+
+<h2>鼠标移入/移出事件</h2>
+<br>
+<div class="box2">
+	<a href="#">鞋子</a>
+   	<ul>
+		<li><a href="#">帆布鞋</a></li>
+        <li><a href="#">增高鞋</a></li>
+        <li><a href="#">凉鞋</a></li>
+	</ul>
+</div>
+<div class="vspace" style="height:100px;"></div>
+
+
+
+<h2>scroll事件</h2>
+<div class="top">返回顶部</div>
+<div class="vspace" style="height:1000px;"></div>
+</body>
+</html>
 
     
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/13/nodejs/" itemprop="url">
-              
-                <span itemprop="name">手把手告诉你如何安装多个版本的node</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-13T13:32:56+08:00"
-              content="2017-04-13" >
-          04-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/webtool/" itemprop="url">
-              
-                <span itemprop="name">webtool</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T13:19:23+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/react/" itemprop="url">
-              
-                <span itemprop="name">react</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T13:13:19+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/react-2/" itemprop="url">
-              
-                <span itemprop="name">React的四个概念简单介绍</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T12:01:16+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/react-1/" itemprop="url">
-              
-                <span itemprop="name">React快速开始+Recat主要知识内容</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T11:59:49+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/angular-bug/" itemprop="url">
-              
-                <span itemprop="name">angular常见问题解答</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T11:55:15+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/seajs/" itemprop="url">
-              
-                <span itemprop="name">五分钟学会Seajs</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T11:49:17+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/requirejs/" itemprop="url">
-              
-                <span itemprop="name">requireJS学习</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T11:49:09+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/11/commonjs/" itemprop="url">
-              
-                <span itemprop="name">模块化规范</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-11T11:44:46+08:00"
-              content="2017-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/04/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/04/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2017/04/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/04/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+  </div>
 
 
           </div>
@@ -739,6 +462,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -948,12 +677,6 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
