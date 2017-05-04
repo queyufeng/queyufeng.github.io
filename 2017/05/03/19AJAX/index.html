@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端基础,动态网页编程,html," />
+  <meta name="keywords" content="html,前端基础,动态网页编程," />
 
 
 
@@ -101,13 +101,13 @@
 
 
 <meta name="description" content="AJAX概念及form提交AJAX概念 AJAX 是什么？  Asynchronous JavaScript and XML（异步JavaScript和XML)   作用  不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 节省用户操作，时间，提高用户体验，减少数据请求传输获取数据   过程：  初始化 – &amp;gt;发送请求 –&amp;gt; 服务器收到请求 –&amp;gt; 服务器处理">
-<meta name="keywords" content="前端基础,动态网页编程,html">
+<meta name="keywords" content="html,前端基础,动态网页编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2017/05/03/19AJAX/index.html">
 <meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="AJAX概念及form提交AJAX概念 AJAX 是什么？  Asynchronous JavaScript and XML（异步JavaScript和XML)   作用  不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 节省用户操作，时间，提高用户体验，减少数据请求传输获取数据   过程：  初始化 – &amp;gt;发送请求 –&amp;gt; 服务器收到请求 –&amp;gt; 服务器处理">
-<meta property="og:updated_time" content="2017-05-03T07:40:49.063Z">
+<meta property="og:updated_time" content="2017-05-03T08:23:42.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
 <meta name="twitter:description" content="AJAX概念及form提交AJAX概念 AJAX 是什么？  Asynchronous JavaScript and XML（异步JavaScript和XML)   作用  不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 节省用户操作，时间，提高用户体验，减少数据请求传输获取数据   过程：  初始化 – &amp;gt;发送请求 –&amp;gt; 服务器收到请求 –&amp;gt; 服务器处理">
@@ -512,8 +512,9 @@
 <li>enctype : 提交的数据格式，默认application/x-www-form-urlencoded </li>
 <li>提交方式必须与后台的接收方式一致。</li>
 </ul>
-<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//err.message捕获出错的原因。</span></div><div class="line"><span class="keyword">try</span>&#123;<span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外的处理白语句</span></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p> finally里是始终会执行的语句<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Try&#123;</div><div class="line"><span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外处理的语句</span></div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line"><span class="comment">//此处是出口语句，当try，catch的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//err.message捕获出错的原因。</span></div><div class="line">    <span class="keyword">try</span>&#123;<span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外的处理白语句</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p> finally里是始终会执行的语句</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Try&#123;</div><div class="line"><span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125; <span class="keyword">catch</span> (err) &#123;</div><div class="line"><span class="comment">//此处是负责例外处理的语句</span></div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line"><span class="comment">//此处是出口语句，当try，catch的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="AJAX的方法"><a href="#AJAX的方法" class="headerlink" title="AJAX的方法"></a>AJAX的方法</h1><ul>
 <li><p>Open方法 open(method,url,async)</p>
 <ul>
@@ -720,11 +721,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/html/" rel="tag"># html</a>
+          
             <a href="/tags/前端基础/" rel="tag"># 前端基础</a>
           
             <a href="/tags/动态网页编程/" rel="tag"># 动态网页编程</a>
-          
-            <a href="/tags/html/" rel="tag"># html</a>
           
         </div>
       
@@ -736,6 +737,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/04/jsyouhua/" rel="next" title="jsyouhua">
+                <i class="fa fa-chevron-left"></i> jsyouhua
+              </a>
             
           </div>
 
@@ -825,7 +830,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-03T07:40:49.063Z</updated>
+  <updated>2017-05-04T01:45:09.429Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,274 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JQuery基础一</title>
+    <link href="http://yoursite.com/2017/05/04/JQuery/"/>
+    <id>http://yoursite.com/2017/05/04/JQuery/</id>
+    <published>2017-05-04T01:39:46.000Z</published>
+    <updated>2017-05-04T01:45:09.429Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="jQuery基础1"><a href="#jQuery基础1" class="headerlink" title="jQuery基础1"></a>jQuery基础1</h1><h2 id="jQuery简介"><a href="#jQuery简介" class="headerlink" title="jQuery简介"></a>jQuery简介</h2><ul>
+<li>jQuery 是一个 JavaScript 凼数库。</li>
+<li>jQuery 极大地简化了 JavaScript 编程。</li>
+<li>jQuery可在jquery.com中下载。</li>
+<li>使用jQuery须将jQuery载入到网页中：<blockquote>
+<p><code>&lt;script type=“ text/javascript”src=“jquery.js”&gt;&lt;/script&gt;</code></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="文档就绪函数"><a href="#文档就绪函数" class="headerlink" title="文档就绪函数"></a>文档就绪函数</h2><p>写法一：</p>
+<blockquote>
+<p><code>$( function () {  /* 执行代码*/   } )</code></p>
+</blockquote>
+<p>写法二：</p>
+<blockquote>
+<p><code>$(document).ready(function(){ /*执行代码 */ });</code></p>
+</blockquote>
+<h3 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h3><p><strong><code>$( function () { } ) ,$(document).ready()与window.onload的区别？</code></strong><br>答： </p>
+<blockquote>
+<ol>
+<li>jq的\$(function(){})是\$(document).ready(function(){})的简写,代表的是DOM结构加载完毕后就会执行。而window.onload必须等到页面内（包括图片的）所有元素加载到浏览器中后才能执行；<strong>window.onload</strong>和$(window).load(function(){})是一样的作用</li>
+<li>编写个数不同：window.onload不能同时写多个，如果有多个window.onload，则只有最后一个会执行，它会把前面的都覆盖掉。$(document).ready(function(){})则不同，它可以编写多个，并且每一个都会执行。</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="JQuery语法"><a href="#JQuery语法" class="headerlink" title="JQuery语法:"></a>JQuery语法:</h2><blockquote>
+<p><code>$(selector).action()</code></p>
+</blockquote>
+<ul>
+<li>美元符号定义 jQuery</li>
+<li>选择符（selector）“查询”和“查找” HTML 元素</li>
+<li>jQuery 的 action() 执行对元素的操作 （方法）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">例： $(<span class="keyword">this</span>).hide()<span class="comment">// - 隐藏当前元素</span></div><div class="line">$(<span class="string">"p"</span>).hide() <span class="comment">//- 隐藏所有段落</span></div></pre></td></tr></table></figure>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
+<li><p>id：根据给定的id匹配一个元素</p>
+<blockquote>
+<p>例： <code>$(&quot;#test&quot;)</code>选取<code>id</code>为<code>test</code>的元素</p>
+</blockquote>
+</li>
+<li><p>.class：根据给定的类名匹配元素</p>
+<blockquote>
+<p>例：<code>$(&quot;.test&quot;)</code> 选取所有<code>class</code>属性值为<code>test</code>的元素</p>
+</blockquote>
+</li>
+<li><p>element：根据给定的元素名匹配元素</p>
+<blockquote>
+<p>例： <code>$(&quot;div&quot;)</code>选取所有<code>div</code>元素</p>
+</blockquote>
+</li>
+<li><p>selector1,selector2,….. :将每一个选择匹配到的元<br>素合并后一起返回</p>
+<blockquote>
+<p>例： <code>$(“ div,span,p”)</code> 选取所有div，span，p元素</p>
+</blockquote>
+</li>
+<li><p>：匹配所有的元素</p>
+<blockquote>
+<p>例：<code>$(“*”)</code>选取所有元素</p>
+</blockquote>
+<p><strong><a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="external">点击查看更多选择器</a></strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><blockquote>
+<p>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法</p>
+</blockquote>
+<ul>
+<li><p>鼠标移入/移出事件(hover)<br><strong>语法：</strong></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(selector).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="comment">//鼠标移入时执行的代码；</span></div><div class="line">&#125;，<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="comment">//鼠标移出时执行的代码；</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>  <strong>例如：</strong></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(“div”).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">$(“ ul”).slideDown();<span class="comment">//鼠标经过div，ul展开</span></div><div class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">$(“ ul”).slideUp();<span class="comment">//鼠标移开div，ul收起</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>切换元素的可见状态事件(toggle)</p>
+<blockquote>
+<p><strong>toggle 语法格式与hover相同</strong></p>
+</blockquote>
+</li>
+<li><p>单击事件(click)<br>  <strong>语法</strong></p>
+<blockquote>
+<p><code>$(selector).click(function( ){/*单击被选元素时执行的代码*/；})</code></p>
+</blockquote>
+</li>
+<li><p>获得/失去焦点事件(focus/blur)</p>
+</li>
+<li>鼠标移入/移出mouseover/mouseout</li>
+<li>滚动事件 scroll()</li>
+<li>重置resize()<blockquote>
+<p>以上事件的语法格式均不click事件相同，只需要修改事件名<br><strong><a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="external">点击查看更多事件方法</a></strong></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul>
+<li>显示/隐藏（show()/hide()）<br>语法：<blockquote>
+<p><code>$(selector).hide(speed,callback);</code>  </p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：<br>“slow”、 “fast” 或 毫秒。</li>
+<li><p>可选的 callback 参数是隐藏或显示完成后所执行的凼数名称。</p>
+<p> <strong>例如</strong></p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//无参数：</span></div><div class="line">$(“div”). hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(“p”).show()</div><div class="line">&#125;，<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(“p”).hide()</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//有参数：</span></div><div class="line">$(<span class="string">"div"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(<span class="string">"p"</span>).show(<span class="number">500</span>,showalert)</div><div class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(<span class="string">"p"</span>).hide(<span class="number">500</span>,hidealert)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>下边没有写语法的均不显示/隐藏语法相同，只需改方法名</strong><br><strong>下边speed,callback没有注释均不以上解释相同</strong></p>
+<ul>
+<li><p>显示/隐藏（toggle()）</p>
+<blockquote>
+<p>toggle() 方法可用来切换hide()和show()</p>
+</blockquote>
+</li>
+<li><p>淡入/淡出（fadeIn()/fadeOut()）</p>
+</li>
+<li><p>淡入/淡出切换（fadeToggle()）</p>
+<blockquote>
+<p>fadeToggle() 方法可以在fadeIn()不fadeOut()方法之间进行切换</p>
+</blockquote>
+</li>
+<li><p>有透明度的淡入/淡出（fadeTo()）<br><strong>语法：</strong></p>
+<blockquote>
+<p><code>$(selector).fadeTo(speed,opacity,callback);</code></p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>speed为必选项 参数规定效果的时长。它可以取以下值：”slow”、<br>“fast” 或毫秒。</li>
+<li>opacity为必选项 参数将淡入淡出效果设置为给定的不透明度<br><strong>（值介于 0 不 1 之间）。</strong></li>
+<li>可选的 callback 参数是该凼数完成后所执行的凼数名称。<br>例：<code>$(“div”).fadeTo(“slow”,0.5)</code></li>
+</ol>
+<ul>
+<li>上/下滑动(slideUp()/slideDown())</li>
+<li><p>上/下滑动(slideToggle())</p>
+<blockquote>
+<p>slideToggle() 方法可以在 slideDown() 不 slideUp()方法之间进行切换</p>
+</blockquote>
+</li>
+<li><p>动画(animate())<br><strong>语法：</strong></p>
+<blockquote>
+<p><code>$(selector).animate({params},speed,callback);</code></p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>animate() 方法用于创建自定义动画</li>
+<li>必选项 params 参数定义形成动画的 CSS 属性</li>
+<li><p>speed，callback 参数用法均与上面相同生成动画的过程中可同时使用多个属性</p>
+<p> <strong>例如</strong></p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“div”).click(function()&#123;</div><div class="line">	$(this).animate(&#123;“width”:”500px”</div><div class="line">,”height”:”300px”,”color”:”#fff”&#125;,500)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;jQuery基础1&quot;&gt;&lt;a href=&quot;#jQuery基础1&quot; class=&quot;headerlink&quot; title=&quot;jQuery基础1&quot;&gt;&lt;/a&gt;jQuery基础1&lt;/h1&gt;&lt;h2 id=&quot;jQuery简介&quot;&gt;&lt;a href=&quot;#jQuery简介&quot; class=&quot;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闭包</title>
+    <link href="http://yoursite.com/2017/05/04/bibao/"/>
+    <id>http://yoursite.com/2017/05/04/bibao/</id>
+    <published>2017-05-04T01:39:35.000Z</published>
+    <updated>2017-05-04T01:44:39.634Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><blockquote>
+<p>从本意上来讲就是封闭包裹的意思，而js中函数正好就是一个封闭包裹的空间，所以从广义上来讲认为任何一个函数都是一个闭包</p>
+<p>从狭义上来讲：<strong>就是某个函数可以访问它外层的函数中定义的变量，认为这个函数就是一个闭包函数</strong></p>
+</blockquote>
+<p>在函数外部自然无法读取函数内的局部变量，如何从外部读取局部变量？</p>
+<blockquote>
+<p>在函数的内部，再定义一个函数，并把内部函数作为返回值，这样就能从外部访问函数内部变量了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">n=<span class="number">999</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(n);</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> f2;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result=f1();</div><div class="line">result(); <span class="comment">// 999</span></div></pre></td></tr></table></figure></p>
+<p><strong>闭包就是能够读取其他函数内部变量的函数</strong></p>
+</blockquote>
+<h2 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途:"></a>闭包的用途:</h2><p>1、读取函数内部的变量<br>2、让这些变量的值始终保持在内存中(优缺共存)<br>3、避免全局变量的污染</p>
+<h2 id="使用闭包时的注意点"><a href="#使用闭包时的注意点" class="headerlink" title="使用闭包时的注意点"></a>使用闭包时的注意点</h2><ol>
+<li>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以丌能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将丌使用的局部变量全部删除。</li>
+<li>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;闭包&quot;&gt;&lt;a href=&quot;#闭包&quot; class=&quot;headerlink&quot; title=&quot;闭包&quot;&gt;&lt;/a&gt;闭包&lt;/h1&gt;&lt;h2 id=&quot;什么是闭包？&quot;&gt;&lt;a href=&quot;#什么是闭包？&quot; class=&quot;headerlink&quot; title=&quot;什么是闭包？&quot;&gt;&lt;/a&gt;什
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsyouhua</title>
+    <link href="http://yoursite.com/2017/05/04/jsyouhua/"/>
+    <id>http://yoursite.com/2017/05/04/jsyouhua/</id>
+    <published>2017-05-04T01:39:19.000Z</published>
+    <updated>2017-05-04T01:45:38.400Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="js代码性能优化"><a href="#js代码性能优化" class="headerlink" title="js代码性能优化"></a>js代码性能优化</h1><ol>
+<li>JS提供了三种循环：for(;;)、 while()、 for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、 while()循环的性能基本持平。</li>
+<li>如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度</li>
+<li>减少全局变量使用，局部变量的访问速度要比全局变量的访问速度更快，因为全局变量其实是window对象的成员，而局部变量是放在函数的栈里的</li>
+<li>尽量少使用eval，每次使用eval需要消耗大量时间</li>
+<li>尽量避免对象的嵌套查询，比如访问这样的对象obj1.obj2.obj3.obj4。应先将obj4以局部变量保存，然后再访问它包含的内容。</li>
+<li>使运算符时，尽量使用+＝，－＝、 *＝、 \=等运算符号，而不是直接进行赋值运算</li>
+<li>当需要将浮点数转换成整型时，应该使用Math.floor()或者Math.round()。而丌是使用parseInt(),该方法用于将字符串转换成数字。而且Math是内部对象，所以Math.floor()其实并没有多少查询方法和调用时间，速度是最快的</li>
+<li>当需要将数字转换成字符时，采用如下方式：”” + 1。从性能上来看，将数字转换成字符时，有如下公式：(“” +) &gt;String() &gt; .toString() &gt; new String()。 String()属于内部函数，所以速度很快。而.toString()要查询原型中的函数，所以速度逊色一些，new String()需要重新创建一个字符串对象，速度最慢 </li>
+<li>尽量作用JSON格式来创建对象，而丌是var obj=new Object()方法。因为前者是直接复制，而后者需要调用构造器，因而前者的性能更好。</li>
+<li>对字符串进行循环操作，例如替换、查找，就使用正则表达式。因为JS的循环速度比较慢，而正则表达式的操作是用C写成的API，性能比较好</li>
+<li>当需要使用数组时，也尽量使用JSON格式的语法，即直接使用如下语法定义数组：[parrm,param,param…],而不是采用 new Array(parrm,param,param…)这种语法。因<br>为使用JSON格式的语法是引擎直接解释的。而后者则需要调用Array的构造器</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;js代码性能优化&quot;&gt;&lt;a href=&quot;#js代码性能优化&quot; class=&quot;headerlink&quot; title=&quot;js代码性能优化&quot;&gt;&lt;/a&gt;js代码性能优化&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;JS提供了三种循环：for(;;)、 while()、 for(in)。在这三种
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AJAX</title>
     <link href="http://yoursite.com/2017/05/03/19AJAX/"/>
     <id>http://yoursite.com/2017/05/03/19AJAX/</id>
     <published>2017-05-03T01:21:17.000Z</published>
-    <updated>2017-05-03T07:40:49.063Z</updated>
+    <updated>2017-05-03T08:23:42.723Z</updated>
     
     <content type="html"><![CDATA[<h1 id="AJAX概念及form提交"><a href="#AJAX概念及form提交" class="headerlink" title="AJAX概念及form提交"></a>AJAX概念及form提交</h1><h2 id="AJAX概念"><a href="#AJAX概念" class="headerlink" title="AJAX概念"></a>AJAX概念</h2><ul>
 <li><p>AJAX 是什么？</p>
@@ -61,8 +324,9 @@
 <li>enctype : 提交的数据格式，默认application/x-www-form-urlencoded </li>
 <li>提交方式必须与后台的接收方式一致。</li>
 </ul>
-<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//err.message捕获出错的原因。</span></div><div class="line"><span class="keyword">try</span>&#123;<span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外的处理白语句</span></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p> finally里是始终会执行的语句<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Try&#123;</div><div class="line"><span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外处理的语句</span></div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line"><span class="comment">//此处是出口语句，当try，catch的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//err.message捕获出错的原因。</span></div><div class="line">    <span class="keyword">try</span>&#123;<span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125;<span class="keyword">catch</span>(err)&#123;</div><div class="line"><span class="comment">//此处是负责例外的处理白语句</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p> finally里是始终会执行的语句</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Try&#123;</div><div class="line"><span class="comment">//此处是可能产生例外的语句</span></div><div class="line">&#125; <span class="keyword">catch</span> (err) &#123;</div><div class="line"><span class="comment">//此处是负责例外处理的语句</span></div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line"><span class="comment">//此处是出口语句，当try，catch的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="AJAX的方法"><a href="#AJAX的方法" class="headerlink" title="AJAX的方法"></a>AJAX的方法</h1><ul>
 <li><p>Open方法 open(method,url,async)</p>
 <ul>
@@ -232,11 +496,11 @@
       <category term="动态网页编程" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
       <category term="动态网页编程" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
@@ -1035,44 +1299,6 @@
   </entry>
   
   <entry>
-    <title>HTML5与CSS3权威指南(完整版)</title>
-    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
-    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
-    <published>2017-04-19T07:31:31.000Z</published>
-    <updated>2017-04-19T08:13:33.737Z</updated>
-    
-    <content type="html"><![CDATA[
-
-	<div class="row">
-    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
-<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;
-
-
-
-&lt;p&gt;HTML 5与CS
-    
-    </summary>
-    
-      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>HTML 5+CSS3从入门到精通</title>
     <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
     <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
@@ -1102,6 +1328,44 @@
 
 
 &lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
+    
+    </summary>
+    
+      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5与CSS3权威指南(完整版)</title>
+    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
+    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
+    <published>2017-04-19T07:31:31.000Z</published>
+    <updated>2017-04-19T08:13:33.737Z</updated>
+    
+    <content type="html"><![CDATA[
+
+	<div class="row">
+    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
+<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;p&gt;HTML 5与CS
     
     </summary>
     
@@ -2819,293 +3083,6 @@
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
       <category term="react" scheme="http://yoursite.com/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angular常见问题解答</title>
-    <link href="http://yoursite.com/2017/04/11/angular-bug/"/>
-    <id>http://yoursite.com/2017/04/11/angular-bug/</id>
-    <published>2017-04-11T03:55:15.000Z</published>
-    <updated>2017-04-11T05:07:51.389Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="angular常见问题解答"><a href="#angular常见问题解答" class="headerlink" title="angular常见问题解答"></a>angular常见问题解答</h1><hr>
-<ol>
-<li><p>angularjs 是mvc还是mvvm框架</p>
-<ul>
-<li><p><strong>首先阐述下你对mvc和mvvm的理解</strong></p>
-<blockquote>
-<p>首先为什么我们会需要MVC？因为随着代码规模越来越大，切分职责是大势所趋，还有为了后期维护方便，修改一块功能不影响其他功能。还有为了复用，因为很多逻辑是一样的。而MVC只是手段，终极目标是模块化和复用。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p><strong>mvvm的优点</strong></p>
-<ul>
-<li><p>低耦合：View可以独立于Model变化和修改，同一个ViewModel可以被多个View复用；并且可以做到View和Model的变化互不影响；</p>
-</li>
-<li><p>可重用性：可以把一些视图的逻辑放在ViewModel，让多个View复用；</p>
-</li>
-<li><p>独立开发：开发人员可以专注与业务逻辑和数据的开发（ViewModemvvmdi计人员可以专注于UI(View)的设计；</p>
-</li>
-<li><p>可测试性：清晰的View分层，使得针对表现层业务逻辑的测试更容易，更简单。</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>在angular中MVVM模式主要分为四部分：</strong></p>
-<pre><code>*    View：它专注于界面的显示和渲染，在angular中则是包含一堆声明式Directive的视图模板。
-*    ViewModel：它是View和Model的粘合体，负责View和Model的交互和协作，它负责给View提供显示的数据，以及提供了View中Command事件操作Model的途径；在angular中$scope对象充当了这个ViewModel的角色
-*    Model：它是与应用程序的业务逻辑相关的数据的封装载体，它是业务领域的对象，Model并不关心会被如何显示或操作，所以模型也不会包含任何界面显示相关的逻辑。在web页面中，大部分Model都是来自Ajax的服务端返回数据或者是全局的配置对象；而angular中的service则是封装和处理这些与Model相关的业务逻辑的场所，这类的业务服务是可以被多个Controller或者其他service复用的领域服务。
-*    Controller：这并不是MVVM模式的核心元素，但它负责ViewModel对象的初始化，它将组合一个或者多个service来获取业务领域Model放在ViewModel对象上，使得应用界面在启动加载的时候达到一种可用的状态。
-</code></pre></li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-0316d3f61152f855.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>mvc的界面和逻辑关联紧密，数据直接从数据库读取。mvvm的界面与viewmode是松耦合，界面数据从viewmodel中获取。所以angularjs更倾向于mvvm</p>
-<hr>
-<ul>
-<li>angularjs中$scope，controller，directive，sevice在mvvm中充当什么角色</li>
-</ul>
-<p>如果你不知道，第一题的分析以及很明确，仔细再仔细的看一遍</p>
-<hr>
-<ul>
-<li>在使用angularjs项目开发中 你使用过那些第三方的插件<br>AngularUi  ui-router oclazyload等等  附上一篇文章仔细去看看 <a href="https://segmentfault.com/a/1190000003858219" target="_blank" rel="external">https://segmentfault.com/a/1190000003858219</a></li>
-</ul>
-<hr>
-<ul>
-<li>在angular项目中你如何控制静态资源的合理加载<br>第三题提到了oclazyload这个插件，很好的一个懒加载静态资源的第三方插件</li>
-</ul>
-<hr>
-<ul>
-<li>再写controlloer逻辑的时候 你需要注意什么？<ul>
-<li>简化代码（这个是所有开发人员都要具备的）</li>
-<li>坚决不能操作dom节点 这个时候可能会问 为什么不能啊<br>你的回答是：DOM操作只能出现在指令（directive）中。最不应该出现的位置就是服务（service）中。Angular倡导以测试驱动开发，在service或者controller中出现了DOM操作，那么也就意味着的测试是无法通过的。当然，这只是一点，重要的是使用Angular的其中一个好处是啥，那就是双向数据绑定，这样就能专注于处理业务逻辑，无需关系一堆堆的DOM操作。如果在Angular的代码中还到处充斥着各种DOM操作，那为什么不直接使用jquery去开发呢。</li>
-</ul>
-</li>
-</ul>
-<p>测试驱动开发是什么呢？普及一下：<br>测试驱动开发，英文全称Test-Driven Development，简称TDD，是一种不同于传统软件开发流程的新型的开发方法。它要求在编写某个功能的代码之前先编写测试代码，然后只编写使测试通过的功能代码，通过测试来推动整个开发的进行。这有助于编写简洁可用和高质量的代码，并加速开发过程。</p>
-<hr>
-<ul>
-<li>AngularJS的数据双向绑定是怎么实现的？<br>1、每个双向绑定的元素都有一个watcher<br>2、在某些事件发生的时候，调用digest脏数据检测。<br>这些事件有：表单元素内容变化、Ajax请求响应、点击按钮执行的函数等。<br>3、脏数据检测会检测rootscope下所有被watcher的元素。<br>$digest函数就是脏数据监测<br>又附上一篇原理性的文章 <a href="https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md" target="_blank" rel="external">https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md</a></li>
-</ul>
-<hr>
-<ul>
-<li>controller之间怎么通讯<ul>
-<li>event<br>这里可以有两种方式，一种是$scope.$emit，然后通过监听$rootScope的事件获取参数；另一种是$rootScope.$broadcast，通过监听$scope的事件获取参数。<br>这两种方法在最新版本的Angular中已经没有性能区别了，主要就是事件发送的方向不同，可以按实际情况选择。</li>
-<li>service<br>可以创建一个专用的事件Service，也可以按照业务逻辑切分，将数据存储在相应的Service</li>
-<li>$rootScope<br>这个方法可能会比较dirty一点，胜在方便，也就是把数据存在$rootScope中，这样各个子$scope都可以调用，不过需要注意一下生命周期</li>
-<li>直接使用$scope.$$nextSibling及类似的属性<br>类似的还有$scope.$parent。这个方法的缺点就更多了，官方不推荐使用任何$$开头的属性，既增加了耦合，又需要处理异步的问题，而且scope的顺序也不是固定的。不推荐<br>另外就是通过本地存储、全局变量或者现代浏览器的postMessage来传递参数了，除非特殊情况，请避免这类方式。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>自定义指令的几个参数<br>说几个常用的如：<br>restrict:指令在dom中的声明形式 E（元素）A（属性）C（类名）M（注释）<br>template：两种形式，一种HTML文本；一个可以接受两个参数的函数，tElemetn和tAttrs，并返回一个代表模板的字符串。模板字符串必须存在一个根DOM元素<br>templateUrl:两种形式，一种代表外部HTML文件路径的字符串；一个可以接受两个参数的函数，参数为tElement和tAttrs，并返回一个外部HTML文件路径的字符串<br>compile (对象或函数)：compile 选项可以返回一个对象或函数。如果设置了 compile 函数,说明我们希望在指令和实时数据被放到DOM中之前进行DOM操作,在这个函数中进行诸如添加和删除节点等DOM操作是安全的。本质上,当我们设置了 link 选项,实际上是创建了一个 postLink() 链接函数,以便 compile() 函数可以定义链接函数。<br>然后又是传送门：<a href="http://www.cnblogs.com/mliudong/p/4180680.html" target="_blank" rel="external">http://www.cnblogs.com/mliudong/p/4180680.html</a><br>compile和link的区别：<br>编译的时候，compile转换dom，碰到绑定监听器的地方就先存着，有几个存几个，到最后汇总成一个link函数，一并执行，提升了性能。</li>
-</ul>
-<hr>
-<ul>
-<li>angular中的$http<br>$http 是 AngularJS 中的一个核心服务，用于读取远程服务器的数据。<br>我们可以使用内置的$http服务直接同外部进行通信。$http服务只是简单的封装了浏览器原生的XMLHttpRequest对象<br>1、链式调用<br>$http服务是只能接受一个参数的函数，这个参数是一个对象，包含了用来生成HTTP请求的<br>配置内容。这个函数返回一个promise对象，具有success和error两个方法。<br>2、返回一个promise对象<br>3、快捷的get请求<br>4、响应对象<br>传送门：<a href="https://github.com/facebook/flux" target="_blank" rel="external">https://github.com/facebook/flux</a></li>
-</ul>
-<hr>
-<ul>
-<li>angular和jquery的区别<br>angular是基于数据驱动，所以angular适合做数据操作比较繁琐的项目（这里可以再提一下单页面应用，如果你不会福利又来了 <a href="http://www.zhihu.com/question/20792064）" target="_blank" rel="external">http://www.zhihu.com/question/20792064）</a><br>jquery是基于dom驱动，jquery适合做dom操作多的项目</li>
-</ul>
-<hr>
-<ul>
-<li>对angular中的form表单了解多少<br>Angular对input元素的type进行了扩展，一共提供了以下10种类型：<br>text<br>number<br>url<br>email<br>radio<br>checkbox<br>hidden<br>button<br>submit<br>reset<br>Angular为表单内置了4中CSS样式。<br>ng-valid 校验合法状态<br>ng-invalid 校验非法状态<br>ng-pristine 如果要使用原生的form，需要设置这个值<br>ng-dirty     表单处于脏数据状态<br>Angular在对表单进行自动校验的时候会校验Model上的属性，如果不设置ng-model，则Angular无法知道myForm.$invalid这个值是否为真。<br>校验的一下内容<br>required 表示是否输入内容<br>ng-maxlength 最大长度<br>ng-minlength 最小长度<br>例子：传送门<a href="https://github.com/18500047564/clutter" target="_blank" rel="external">https://github.com/18500047564/clutter</a></li>
-</ul>
-<hr>
-<ul>
-<li>ng-show/ng-hide 与 ng-if 的区别？<br>我们都知道ng-show/ng-hide实际上是通过 display 来进行隐藏和显示的。而ng-if实际上控制dom节点的增删除来实现的。因此如果我们是根据不同的条件来进行dom节点的加载确认的话，那么ng-if的性能好过ng-show.</li>
-</ul>
-<hr>
-<ul>
-<li>解释下什么是 $rootScrope 以及和 $scope 的区别？<br>$rootScrope是所有$scope的父对象</li>
-</ul>
-<hr>
-<ul>
-<li>表达式 <code>{</code>{yourModel<code>}</code>}<code>是如何工作的？
-它依赖于 $interpolation服务，在初始化页面html后，它会找到这些表达式，并且进行标记，于是每遇见一个</code>{<code>{</code> <code>}</code> <code>}</code> ，则会设置一个 $watch 。而 $interpolation 会返回一个带有上下文参数的函数，最后该函数执行，则算是表达式 $parse 到那个作用域上。</li>
-</ul>
-<hr>
-<ul>
-<li>fliter是什么你了解的有多少？实现一个自定义fliter<br>ng 内置的 filter 有九种：<br>date（日期）<br>currency（货币）<br>limitTo（限制数组或字符串长度）<br>orderBy（排序）<br>lowercase（小写）<br>uppercase（大写）<br>number（格式化数字，加上千位分隔符，并接收参数限定小数点位数）<br>filter（处理一个数组，过滤出含有某个子串的元素）<br>json（格式化 json 对象）<br>filter 有两种使用方法，<br>一种是直接在页面里：<br><strong><code>&lt;p&gt;</code>{<code>{</code>now | date : ‘yyyy-MM-dd’<code>}</code>}<code>`&lt;/p&gt;</code></strong><br>另一种是在 js 里面用：<br>$filter(‘过滤器名称’)(需要过滤的对象, 参数1, 参数2,…)<br>$filter(‘date’)(now, ‘yyyy-MM-dd hh:mm:ss’);<br>自定义一个去重数组的:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">app.filter(<span class="string">'unique'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> n = [];</div><div class="line">        <span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">           <span class="keyword">if</span>(!obj[arr[i]])&#123;</div><div class="line">            n.push(arr[i])</div><div class="line">            obj[arr[i]] = <span class="number">1</span>;</div><div class="line">           &#125; </div><div class="line">        &#125;</div><div class="line"></div><div class="line">       <span class="keyword">return</span> n;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;angular常见问题解答&quot;&gt;&lt;a href=&quot;#angular常见问题解答&quot; class=&quot;headerlink&quot; title=&quot;angular常见问题解答&quot;&gt;&lt;/a&gt;angular常见问题解答&lt;/h1&gt;&lt;hr&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;angularjs 是m
-    
-    </summary>
-    
-      <category term="前端主流框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="angular" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/angular/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>五分钟学会Seajs</title>
-    <link href="http://yoursite.com/2017/04/11/seajs/"/>
-    <id>http://yoursite.com/2017/04/11/seajs/</id>
-    <published>2017-04-11T03:49:17.000Z</published>
-    <updated>2017-04-11T03:53:46.948Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li>1：引入包文件 sea.js</li>
-<li>2: 启动seajs.use(‘./main’) 设置启动入口模块 参数可以不需要.js后缀</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>06_seajs基本使用<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 1：引包 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../seajs-3.0.0/dist/sea.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- &lt;script src="./one.js" charset="utf-8"&gt;&lt;/script&gt;</span></div><div class="line">  &lt;script src="./two.js" charset="utf-8"&gt;&lt;/script&gt; 不适用seajs加载的方式，需要注意文件顺序--&gt;</div><div class="line">  <span class="comment">&lt;!-- 2: 启动seajs 并且指定入口模块 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    seajs.use(<span class="string">'./one'</span>);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>3: 声明一个模块：模块在define();内部包裹</li>
-<li>4: 需要向外暴露值，通过module.exports来返回</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require,exports,module</span>)</span>&#123;</div><div class="line">      <span class="comment">// 如果这个模块需要别的模块的返回值</span></div><div class="line">      <span class="keyword">var</span> aaa =<span class="built_in">require</span>(<span class="string">'模块路径ID'</span>);<span class="comment">//返回对方模块内部的module.exports</span></div><div class="line">      <span class="built_in">module</span>.exports = 返回值;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<ul>
-<li>在模块内部，声明的变量，都是模块的作用域<pre><code>+ 在CMD中，一个模块就是一个文件，外部无法访问
-+ 如果需要访问，通过module.exports 向外暴露
-</code></pre></li>
-</ul>
-<h4 id="define参数的三种方式"><a href="#define参数的三种方式" class="headerlink" title="define参数的三种方式"></a>define参数的三种方式</h4><ul>
-<li><p>字符串 define(‘123’)</p>
-<blockquote>
-<p>define(‘我是字符串’);</p>
-</blockquote>
-</li>
-<li><p>对象define({name:’aaa’})</p>
-<blockquote>
-<p>define({name:’gaga’,age:19});</p>
-</blockquote>
-</li>
-<li><p>函数define(function(require,exports,module){})</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require,exports,module</span>)</span>&#123;</div><div class="line">  <span class="comment">// module.exports = &#123;nane:'jack'&#125;</span></div><div class="line">  <span class="keyword">return</span> <span class="string">'abcl'</span>;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="exports和module-exports的小问题"><a href="#exports和module-exports的小问题" class="headerlink" title="exports和module.exports的小问题"></a>exports和module.exports的小问题</h4><ul>
-<li>模块被加载的时期，这两个对象都指向一块内存，该内存初始值是一个空对象</li>
-<li>不管任意改变哪个对象的内存指向 （对象=值），最终仍然返回module.exports对象</li>
-<li><p>如果module.exports 和exports让你头晕脑胀，建议使用module.exports</p>
-</li>
-<li><p><strong>框架的使用尽量遵守其规则,基于define内部解析对象，根据参数的数据来，顺序不要改变</strong></p>
-</li>
-<li>module.exports 用来赋值并暴露，exports用来给暴露的对象挂载属性，就是一个简写<h4 id="Use的2种方法"><a href="#Use的2种方法" class="headerlink" title="Use的2种方法"></a>Use的2种方法</h4></li>
-<li><p>use函数是一个异步函数</p>
-<ul>
-<li>异步：不阻塞后续代码执行</li>
-<li>同步：当前函数不执行完毕，下一行代码无法执行<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">seajs.use(<span class="string">'./a'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">    code....</div><div class="line">  &#125;)</div><div class="line">  <span class="comment">// 着重掌握</span></div><div class="line">  seajs.use([<span class="string">'./a'</span>,<span class="string">'./b'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    code..</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>seajs.use 第二个参数是一个函数，内部参数与传入的加载模块的返回值的顺序一致</p>
-</li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="http://upload-images.jianshu.io/upload_images/4071931-90c555599427ed14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 1.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-3bd1fce1865f145a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 2.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-40750964b2359ec9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 3.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-f9c28a3f102986b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 4.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-055972a5dc5c0511.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 5.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-a6655f4b716eadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 6.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-979612060f8ddeff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 7.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-322dc147f8820040.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 8.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-278a02434091f7fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图像 9.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;1：引入包文件 sea.js&lt;/li&gt;
-&lt;li&gt;2: 启动seajs.use(‘./main’) 设置启动入口模块 参数可以不需要.js后缀&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
-    
-    </summary>
-    
-      <category term="前端模块化加载框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="模块化规范" scheme="http://yoursite.com/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83/"/>
-    
-      <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-      <category term="Seajs" scheme="http://yoursite.com/tags/Seajs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>requireJS学习</title>
-    <link href="http://yoursite.com/2017/04/11/requirejs/"/>
-    <id>http://yoursite.com/2017/04/11/requirejs/</id>
-    <published>2017-04-11T03:49:09.000Z</published>
-    <updated>2017-04-11T04:06:31.881Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="requireJS"><a href="#requireJS" class="headerlink" title="requireJS"></a>requireJS</h4><ul>
-<li>requireJS也可以用Seajs写法,不建议，因为思想冲突，代码风格不再是加载前置了</li>
-<li>1: 引包</li>
-<li>2：开启程序入口模块 requirejs([‘./a’,’./b’],function(a,b){code..})<ul>
-<li>seajs.use([‘./a’,’./b’],function(a,b){code..});</li>
-</ul>
-</li>
-<li>3: 定义一个模块 define(依赖项数组,返回值的回调);<ul>
-<li>define(function(require,exports,module){code..});</li>
-</ul>
-</li>
-<li>4: 向外暴露 return<ul>
-<li>seajs: module.exports || exports 挂载属性</li>
-</ul>
-</li>
-<li>5: 需要拿到别的模块的暴露值，参考第三点中的返回值回调  <ul>
-<li>seajs：require<h4 id="seajs和-requireJS比较"><a href="#seajs和-requireJS比较" class="headerlink" title="seajs和 requireJS比较"></a>seajs和 requireJS比较</h4></li>
-</ul>
-</li>
-<li>requireJS加载前置，声明前置 （需要什么提前准备好）<ul>
-<li>首先加载文件前,检查该文件是否有依赖，如果有依赖，先加载依赖模块，再加载本身模块.</li>
-</ul>
-</li>
-<li>seajs加载：懒加载，延迟加载，加载滞后（什么时候，什么时候加载）</li>
-<li>玉伯：seajs:明显没有bug —— requirejs: 没有明显的bug</li>
-<li><p>我个人认为requireJS可能用得比较多一点</p>
-<ul>
-<li>requirejs加载机制,思想更贴合前端开发引入标签的模式</li>
-<li>加载的机制，在web端，可能因为网络或者卡顿，不太会出现出来一部分，另一部分白的</li>
-<li>懒加载思想就是节省资源</li>
-</ul>
-<p>####图解seajs和 requireJS</p>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/4071931-ee3ab4fe5e6c4285.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="requirejs和seajs.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;requireJS&quot;&gt;&lt;a href=&quot;#requireJS&quot; class=&quot;headerlink&quot; title=&quot;requireJS&quot;&gt;&lt;/a&gt;requireJS&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;requireJS也可以用Seajs写法,不建议，因为思想冲突，代码风格
-    
-    </summary>
-    
-      <category term="前端模块化加载框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="模块化规范" scheme="http://yoursite.com/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83/"/>
-    
-      <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-      <category term="Requirejs" scheme="http://yoursite.com/tags/Requirejs/"/>
     
   </entry>
   
