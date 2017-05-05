@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-04T09:38:11.212Z</updated>
+  <updated>2017-05-05T01:02:42.012Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/05/04/JQuery/"/>
     <id>http://yoursite.com/2017/05/04/JQuery/</id>
     <published>2017-05-04T01:39:46.000Z</published>
-    <updated>2017-05-04T09:38:11.212Z</updated>
+    <updated>2017-05-05T01:02:42.012Z</updated>
     
     <content type="html"><![CDATA[<h1 id="jQuery基础1"><a href="#jQuery基础1" class="headerlink" title="jQuery基础1"></a>jQuery基础1</h1><h2 id="jQuery简介"><a href="#jQuery简介" class="headerlink" title="jQuery简介"></a>jQuery简介</h2><ul>
 <li>jQuery 是一个 JavaScript 凼数库。</li>
@@ -173,6 +173,40 @@
  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“div”).click(function()&#123;</div><div class="line">	$(this).animate(&#123;“width”:”500px”</div><div class="line">,”height”:”300px”,”color”:”#fff”&#125;,500)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<ul>
+<li><p>停止动画（stop()）</p>
+<p>  <strong>语法：</strong></p>
+<blockquote>
+<p>$(selector).stop(stopAll,goToEnd);</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。</li>
+<li>可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。</li>
+<li>jQuery stop() 方法用于停止动画或效果，在它们完成之前。<br>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。 </li>
+</ol>
+<ul>
+<li><p>延迟（delay()）</p>
+<p>  <strong>语法：</strong></p>
+<blockquote>
+<p>$(selector).delay(speed,queueName)</p>
+</blockquote>
+<p>  delay() 方法对队列中的下一项的执行设置延迟。speed不上相同，queueName可选。规定队列的名称。默认是 “ fx” ，标准效果队列，一般丌用。</p>
+<p>  例：<br>  $(“ div”).show().delay().hide();</p>
+</li>
+<li><p>方法链接(chaining)</p>
+<blockquote>
+<p>chaining是一种<strong>链接技术</strong>，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条</p>
+</blockquote>
+<p>  例：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//例：</span></div><div class="line">$(<span class="string">"div"</span>).css(<span class="string">"background"</span>,<span class="string">"#00f"</span>).slideUp(<span class="number">2000</span>).slideDown(<span class="number">2000</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="$(this)"></a>$(this)</h2><blockquote>
+<p>$(this)：代表的上下文对象是一个jquery的上下文对象，可以调用jquery的方法和属性值。</p>
+</blockquote>
+<p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#textbox"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">$(<span class="keyword">this</span>).css(<span class="string">"width"</span>,<span class="string">"200px"</span>);<span class="comment">//等同于$("#textbox").css("width","</span></div><div class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -1299,44 +1333,6 @@
   </entry>
   
   <entry>
-    <title>HTML5与CSS3权威指南(完整版)</title>
-    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
-    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
-    <published>2017-04-19T07:31:31.000Z</published>
-    <updated>2017-04-19T08:13:33.737Z</updated>
-    
-    <content type="html"><![CDATA[
-
-	<div class="row">
-    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
-<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;
-
-
-
-&lt;p&gt;HTML 5与CS
-    
-    </summary>
-    
-      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>HTML 5+CSS3从入门到精通</title>
     <link href="http://yoursite.com/2017/04/19/html-css-pdf/"/>
     <id>http://yoursite.com/2017/04/19/html-css-pdf/</id>
@@ -1366,6 +1362,44 @@
 
 
 &lt;p&gt;HTML5+CSS3从入门到精通是通过基础知识+中小实例
+    
+    </summary>
+    
+      <category term="书籍" scheme="http://yoursite.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5与CSS3权威指南(完整版)</title>
+    <link href="http://yoursite.com/2017/04/19/html-css-quanweipdf/"/>
+    <id>http://yoursite.com/2017/04/19/html-css-quanweipdf/</id>
+    <published>2017-04-19T07:31:31.000Z</published>
+    <updated>2017-04-19T08:13:33.737Z</updated>
+    
+    <content type="html"><![CDATA[
+
+	<div class="row">
+    <embed src="/PDF/HTML5与CSS3权威指南(完整版).pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>HTML 5与CSS 3指南（第3版）是HTML 5与CSS 3领域公认的标杆之作，被读者誉为“系统学习HTML 5与CSS 3的著作”和“Web前端工程师案头必备图书之一”。 不仅是HTML 5与CSS 3图书领域当之无愧的领头羊，而且在整个原创计算机图书领域是佼佼者。</p>
+<p>第3版首先从技术的角度根据的HTML 5和CSS 3标准进行了更新和补充，其次根据读者的反馈对内容的组织结构和写作方式做了进一步的优化，内容更经典，阅读体验也更好。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/PDF/HTML5与CSS3权威指南(完整版).pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;p&gt;HTML 5与CS
     
     </summary>
     
