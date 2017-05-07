@@ -1,0 +1,1292 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
+<!-- 百度自动推送 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<!-- 360自动收录 -->
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?1cd910541f9f2261e5490f059fb0d90b":"https://jspassport.ssl.qhimg.com/11.0.1.js?1cd910541f9f2261e5490f059fb0d90b";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+
+ <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端基础,动态网页编程,jQuery," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小鸟依家" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历      .eq  过滤遍历  用法   1$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);  说明：">
+<meta name="keywords" content="前端基础,动态网页编程,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuerybianli">
+<meta property="og:url" content="http://yoursite.com/2017/05/07/jQuerybianli/index.html">
+<meta property="og:site_name" content="小鸟依家">
+<meta property="og:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历      .eq  过滤遍历  用法   1$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);  说明：">
+<meta property="og:updated_time" content="2017-05-07T13:01:56.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuerybianli">
+<meta name="twitter:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历      .eq  过滤遍历  用法   1$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);  说明：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/07/jQuerybianli/"/>
+
+
+
+
+
+  <title> jQuerybianli | 小鸟依家 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?442b6593262ef36692e6df04a7c9dc57";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小鸟依家</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-book">
+          <a href="/book" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            书籍
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/jQuerybianli/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小鳥依家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/a.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鸟依家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jQuerybianli
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T20:58:36+08:00">
+                2017-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/动态网页编程/" itemprop="url" rel="index">
+                    <span itemprop="name">动态网页编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/05/07/jQuerybianli/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/07/jQuerybianli/" class="leancloud_visitors" data-flag-title="jQuerybianli">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="jQuery-中的遍历"><a href="#jQuery-中的遍历" class="headerlink" title="jQuery 中的遍历"></a>jQuery 中的遍历</h2><blockquote>
+<p>jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。<br><strong>jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历</strong>   </p>
+</blockquote>
+<ul>
+<li><p><strong>.eq </strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'li'</span>).eq(<span class="number">0</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个，从零开始</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.first()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'li'</span>).first().css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.last()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'li'</span>).last().css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>最后一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.slice()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'li'</span>).slice(<span class="number">2</span>,<span class="number">4</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个到第几个，下标从零开始，要头不要尾</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.children(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'ul'</span>).children(<span class="string">'div'</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有【直接子元素】是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.find(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'ul'</span>).find(<span class="string">'div'</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有后代是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.parent()</strong> 向上遍历</p>
+<ul>
+<li><p>用法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'ul'</span>).parent().css(<span class="string">'background'</span>,<span class="string">'red'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>返回ul的<strong>直接父元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>更多遍历方法</p>
+<ul>
+<li><p>向上遍历    （查找元素祖先）</p>
+<p>  | 遍历方法      |     描述 |   例子|<br>  | :——–: | :——–:| :——: |<br>  | parent() |返回被选元素的直接父元素 (只会向下一级对 DOM 树进行遍历 ) |  $(“span”).parent();|<br>  |parents() |返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>) |$(“span”).parents();$(“span”).parents(“ul”)返回所有 <code>&lt;span&gt;</code> 元素的所有祖先，并且它是<code>&lt;ul&gt;</code> 元素|<br>  |parentsUntil()| 返回介于两个给定元素之间的所有祖先元素| $(“span”).parentsUntil(“div”);|</p>
+</li>
+<li><p>向下遍历（查找元素后代）</p>
+<p>  | 遍历方法|     描述 |   例子|<br>  | :——–: | :——–:| :——: |<br>  | children()|   返回被选元素的所有直接子元素(只会向下一级对 DOM 树进行遍历 )| $(“div”).children()$(“div”).children(“p.1”)返回类名为 “1” 的所有 <code>&lt;p&gt;</code> 元素，并且它们是<code>&lt;div&gt;</code> 的直接子元素|<br>  |find()|返回被选元素的后代元素，一路向下直到最后一个后代| $(“div”).find(“span”);$(“div”).find(“*”);返回 <code>&lt;div&gt;</code> 的所有后代|</p>
+</li>
+<li><p>水平遍历方法(元素同胞元素)：</p>
+<p>  | 遍历方法|     描述 |   例子   |<br>  | :——–: | :——–:| :——: |<br>  | siblings()|   返回被选元素的所有同胞元素|  $(“h2”).siblings();$(“h2”).siblings(“p”);返回属于 <code>&lt;h2&gt;</code> 的同胞元素的所有 <code>&lt;p&gt;</code> 元素|<br>  |next() <br>prev() |返回被选元素的下一个/上一个同胞元素|$(“h2”).next();|<br>  |nextAll()<br>prevAll()|返回被选元素的所有跟随的同胞（前面同胞）元素|$(“h2”).nextAll();|<br>  |nextUntil()<br>prevUntil()|返回介于两个给定参数之间的所有跟随的同胞（前面同胞）元素|$(“h2”).nextUntil(“h6”);|</p>
+</li>
+<li><p>过滤：</p>
+<p>  | 遍历方法      |     描述 |   例子   |<br>  | :——–: | :——–:| :——: |<br>  | first()|   返回被选元素的首个元素|  $(“div p”).first();|<br>  |last()| 返回被选元素的最后一个元素| $(“div p”).last();|<br>  |eq()| 返回被选元素中带有指定索引号的元素|$(“p”).eq(1);|<br>  |filter()| 不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回|$(“p”).filter(“.intro”);|<br>  |not() not() |方法返回不匹配标准的所有元素not() 方法不 filter() 相反。|$(“p”).not(“.intro”);|</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 遍历所有 **each遍历：**
+
+    * each()方法规定为每个匹配元素指定运行的函数
+
+        &gt; 语法：`$(selector).each(function(index,element))`
+
+    * 例如 
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(<span class="string">"li"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert($(<span class="keyword">this</span>).text())</div><div class="line">   &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</code></pre><h2 id="jQuery制作下拉列表"><a href="#jQuery制作下拉列表" class="headerlink" title="jQuery制作下拉列表"></a>jQuery制作下拉列表</h2><ul>
+<li><p>下拉列表</p>
+<ul>
+<li>三级下拉列表（竖向）：单击一级菜单时展开二级菜单，单击二级菜单时展开三级菜单，当单击另一个一级菜单时同级其它菜单将收起。</li>
+</ul>
+</li>
+<li><p>多级下拉列表（横向）：</p>
+<ul>
+<li>鼠标经过一级菜单时展开二级菜单，经过二级菜单<br>时展开三级菜单，依次类推</li>
+</ul>
+</li>
+</ul>
+<h2 id="easing-js的使用"><a href="#easing-js的使用" class="headerlink" title="easing.js的使用"></a>easing.js的使用</h2><blockquote>
+<p><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank" rel="external">easing.js</a>是个极小的 JavaScript 第三方包，支持 CSS3 的动画效果，非常简单美观。<br>move.js中有编写了多种效果</p>
+</blockquote>
+<ul>
+<li>老规矩，要使用，先引用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/jquery-1.8.3.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line"><span class="comment">// easing是基于jQ的，说要在引用他之前要先引用jQ</span></div><div class="line"></div><div class="line">&lt;script src=<span class="string">"js/easing.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="keyword">this</span>).find(<span class="string">"ul"</span>).sto</div><div class="line">p().slideDown(<span class="number">600</span>,<span class="string">'效果名称'</span>);</div><div class="line"></div><div class="line"><span class="comment">//我们只需在这更换效果名称即可：如easeIn,easeOut，elasticOut等。</span></div></pre></td></tr></table></figure>
+<h2 id="animate-css的使用"><a href="#animate-css的使用" class="headerlink" title="animate.css的使用"></a>animate.css的使用</h2><blockquote>
+<p><a href="http://www.dowebok.com/demo/2014/98/" target="_blank" rel="external">animate.css</a>animate.css 是一个来自国外的 CSS3 动画库，它预设了抖动（shake）、闪烁（flash）、弹跳（bounce）、翻转（flip）、旋转（rotateIn/rotateOut）、淡入淡出（fadeIn/fadeOut）等多达 60 多种动画效果，几乎包含了所有常见的动画效果。</p>
+</blockquote>
+<p>虽然借助 animate.css 能够很方便、快速的制作 CSS3 动画效果，但还是建议看看 animate.css 的代码，也许你能从中学到一些东西。</p>
+<ul>
+<li>使用<blockquote>
+<p>引入文件：<code>&lt;link href=&quot;animate.css&quot; type=&quot;text/css&quot; /&gt;</code><br>HTML及使用：<code>&lt;div class=“animated bounce” &gt;&lt;/div&gt;</code><br>刷新页面就可看到动画效果             </p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="小鳥依家 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="小鳥依家 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端基础/" rel="tag"># 前端基础</a>
+          
+            <a href="/tags/动态网页编程/" rel="tag"># 动态网页编程</a>
+          
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/07/GoogleRegister/" rel="prev" title="谷歌账户注册验证时手机号不能使用问题解决">
+                谷歌账户注册验证时手机号不能使用问题解决 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/a.jpg"
+               alt="小鳥依家" />
+          <p class="site-author-name" itemprop="name">小鳥依家</p>
+           
+              <p class="site-description motion-element" itemprop="description">今天你足够努力了吗!?</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-中的遍历"><span class="nav-number">1.</span> <span class="nav-text">jQuery 中的遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery制作下拉列表"><span class="nav-number">2.</span> <span class="nav-text">jQuery制作下拉列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#easing-js的使用"><span class="nav-number">3.</span> <span class="nav-text">easing.js的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animate-css的使用"><span class="nav-number">4.</span> <span class="nav-text">animate.css的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+         <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鳥依家</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "dcbbeb86db9a445fa2d41eed4e5da6f2",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("gnW1qdaB0A8IuuhYL0nv0GfD-gzGzoHsz", "7rlhnS8S5bti9GaH1CzM1kv2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
