@@ -133,7 +133,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/07/jQuerybianli/index.html">
 <meta property="og:site_name" content="小鸟依家">
 <meta property="og:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历      .eq  过滤遍历  用法   1$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);  说明：">
-<meta property="og:updated_time" content="2017-05-07T13:16:40.284Z">
+<meta property="og:updated_time" content="2017-05-10T09:51:52.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery遍历 easing.js 和 animate.css">
 <meta name="twitter:description" content="jQuery 中的遍历 jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。jQ遍历分为四种，1. 想上遍历   2. 向下遍历   3. 过滤   4.   水平遍历      .eq  过滤遍历  用法   1$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);  说明：">
@@ -595,21 +595,127 @@
 </li>
 <li><p>更多遍历方法</p>
 <ul>
-<li><p>向上遍历    （查找元素祖先）</p>
-<p>  | 遍历方法      |     描述 |   例子|<br>  | :——–: | :——–:| :——: |<br>  | parent() |返回被选元素的直接父元素 (只会向下一级对 DOM 树进行遍历 ) |  $(“span”).parent();|<br>  |parents() |返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>) |$(“span”).parents();$(“span”).parents(“ul”)返回所有 <code>&lt;span&gt;</code> 元素的所有祖先，并且它是<code>&lt;ul&gt;</code> 元素|<br>  |parentsUntil()| 返回介于两个给定元素之间的所有祖先元素| $(“span”).parentsUntil(“div”);|</p>
-</li>
-<li><p>向下遍历（查找元素后代）</p>
-<p>  | 遍历方法|     描述 |   例子|<br>  | :——–: | :——–:| :——: |<br>  | children()|   返回被选元素的所有直接子元素(只会向下一级对 DOM 树进行遍历 )| $(“div”).children()$(“div”).children(“p.1”)返回类名为 “1” 的所有 <code>&lt;p&gt;</code> 元素，并且它们是<code>&lt;div&gt;</code> 的直接子元素|<br>  |find()|返回被选元素的后代元素，一路向下直到最后一个后代| $(“div”).find(“span”);$(“div”).find(“*”);返回 <code>&lt;div&gt;</code> 的所有后代|</p>
-</li>
-<li><p>水平遍历方法(元素同胞元素)：</p>
-<p>  | 遍历方法|     描述 |   例子   |<br>  | :——–: | :——–:| :——: |<br>  | siblings()|   返回被选元素的所有同胞元素|  $(“h2”).siblings();$(“h2”).siblings(“p”);返回属于 <code>&lt;h2&gt;</code> 的同胞元素的所有 <code>&lt;p&gt;</code> 元素|<br>  |next() <br>prev() |返回被选元素的下一个/上一个同胞元素|$(“h2”).next();|<br>  |nextAll()<br>prevAll()|返回被选元素的所有跟随的同胞（前面同胞）元素|$(“h2”).nextAll();|<br>  |nextUntil()<br>prevUntil()|返回介于两个给定参数之间的所有跟随的同胞（前面同胞）元素|$(“h2”).nextUntil(“h6”);|</p>
-</li>
-<li><p>过滤：</p>
-<p>  | 遍历方法      |     描述 |   例子   |<br>  | :——–: | :——–:| :——: |<br>  | first()|   返回被选元素的首个元素|  $(“div p”).first();|<br>  |last()| 返回被选元素的最后一个元素| $(“div p”).last();|<br>  |eq()| 返回被选元素中带有指定索引号的元素|$(“p”).eq(1);|<br>  |filter()| 不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回|$(“p”).filter(“.intro”);|<br>  |not() not() |方法返回不匹配标准的所有元素not() 方法不 filter() 相反。|$(“p”).not(“.intro”);|</p>
-</li>
+<li>向上遍历    （查找元素祖先）</li>
 </ul>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">遍历方法</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">parent()</td>
+<td style="text-align:center">返回被选元素的直接父元素 (只会向下一级对 DOM 树进行遍历 )</td>
+<td style="text-align:center">$(“span”).parent();</td>
+</tr>
+<tr>
+<td style="text-align:center">parents()</td>
+<td style="text-align:center">返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>)</td>
+<td style="text-align:center">$(“span”).parents();$(“span”).parents(“ul”)返回所有 <code>&lt;span&gt;</code> 元素的所有祖先，并且它是<code>&lt;ul&gt;</code> 元素</td>
+</tr>
+<tr>
+<td style="text-align:center">parentsUntil()</td>
+<td style="text-align:center">返回介于两个给定元素之间的所有祖先元素</td>
+<td style="text-align:center">$(“span”).parentsUntil(“div”);</td>
+</tr>
+</tbody>
+</table>
+<pre><code>* 向下遍历（查找元素后代）
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">遍历方法</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">children()</td>
+<td style="text-align:center">返回被选元素的所有直接子元素(只会向下一级对 DOM 树进行遍历 )</td>
+<td style="text-align:center">$(“div”).children()$(“div”).children(“p.1”)返回类名为 “1” 的所有 <code>&lt;p&gt;</code> 元素，并且它们是<code>&lt;div&gt;</code> 的直接子元素</td>
+</tr>
+<tr>
+<td style="text-align:center">find()</td>
+<td style="text-align:center">返回被选元素的后代元素，一路向下直到最后一个后代</td>
+<td style="text-align:center">$(“div”).find(“span”);$(“div”).find(“*”);返回 <code>&lt;div&gt;</code> 的所有后代</td>
+</tr>
+</tbody>
+</table>
+<pre><code>* 水平遍历方法(元素同胞元素)：
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">遍历方法</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">siblings()</td>
+<td style="text-align:center">返回被选元素的所有同胞元素</td>
+<td style="text-align:center">$(“h2”).siblings();$(“h2”).siblings(“p”);返回属于 <code>&lt;h2&gt;</code> 的同胞元素的所有 <code>&lt;p&gt;</code> 元素</td>
+</tr>
+<tr>
+<td style="text-align:center">next() <br>prev()</td>
+<td style="text-align:center">返回被选元素的下一个/上一个同胞元素</td>
+<td style="text-align:center">$(“h2”).next();</td>
+</tr>
+<tr>
+<td style="text-align:center">nextAll()<br>prevAll()</td>
+<td style="text-align:center">返回被选元素的所有跟随的同胞（前面同胞）元素</td>
+<td style="text-align:center">$(“h2”).nextAll();</td>
+</tr>
+<tr>
+<td style="text-align:center">nextUntil()<br>prevUntil()</td>
+<td style="text-align:center">返回介于两个给定参数之间的所有跟随的同胞（前面同胞）元素</td>
+<td style="text-align:center">$(“h2”).nextUntil(“h6”);</td>
+</tr>
+</tbody>
+</table>
+<pre><code>* 过滤：
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">遍历方法</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">first()</td>
+<td style="text-align:center">返回被选元素的首个元素</td>
+<td style="text-align:center">$(“div p”).first();</td>
+</tr>
+<tr>
+<td style="text-align:center">last()</td>
+<td style="text-align:center">返回被选元素的最后一个元素</td>
+<td style="text-align:center">$(“div p”).last();</td>
+</tr>
+<tr>
+<td style="text-align:center">eq()</td>
+<td style="text-align:center">返回被选元素中带有指定索引号的元素</td>
+<td style="text-align:center">$(“p”).eq(1);</td>
+</tr>
+<tr>
+<td style="text-align:center">filter()</td>
+<td style="text-align:center">不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回</td>
+<td style="text-align:center">$(“p”).filter(“.intro”);</td>
+</tr>
+<tr>
+<td style="text-align:center">not() not()</td>
+<td style="text-align:center">方法返回不匹配标准的所有元素not() 方法不 filter() 相反。</td>
+<td style="text-align:center">$(“p”).not(“.intro”);</td>
+</tr>
+</tbody>
+</table>
 <pre><code>* 遍历所有 **each遍历：**
 
     * each()方法规定为每个匹配元素指定运行的函数
@@ -719,6 +825,10 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/05/10/jQuery2/" rel="next" title="jQuery2">
+                <i class="fa fa-chevron-left"></i> jQuery2
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -807,7 +917,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
